@@ -1,6 +1,6 @@
-# Welcome to GitHub
+# 마이아포(My Eye-tracking Portfolio)
 
-캡스톤 팀 생성을 축하합니다.
+팀페이지 주소 : https://kookmin-sw.github.io/capstone-2020-3/
 
 ## 팀소개 및 페이지를 꾸며주세요.
 
