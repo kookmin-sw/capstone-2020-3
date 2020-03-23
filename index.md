@@ -1,37 +1,76 @@
-## Welcome to GitHub Pages
+# 마이아포(My Eye-tracking Portfolio)
 
-You can use the [editor on GitHub](https://github.com/kookmin-sw/cap-template/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## 1. 프로젝트 개요
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+​	
 
-```markdown
-Syntax highlighted code block
+​	
 
-# Header 1
-## Header 2
-### Header 3
+1. 
+2. 
+3. 
+4. 
 
-- Bulleted
-- List
+## 2. 팀 소개
 
-1. Numbered
-2. List
+#### 최락준
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+~~~
+📧 email: choirak0805@kookmin.ac.kr
+📌 role: 팀장
+~~~
 
-### Jekyll Themes
+#### 우승민
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kookmin-sw/cap-template/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+~~~
+📧 email: wsmwin@kookmin.ac.kr
+📌 role: 
+~~~
+
+#### 심재욱
+
+
+
+~~~
+📧 email: ts4837829@kookmin.ac.kr
+📌 role: 
+~~~
+
+#### 권강민
+
+
+
+~~~
+📧 email: kmkwon94@kookmin.ac.kr
+📌 role: 
+~~~
+
+#### 윤준호
+
+
+
+~~~
+📧 email: rickyoon95@kookmin.ac.kr
+📌 role: 
+~~~
+
+#### 황채은
+
+
+
+~~~
+📧 email: xiromjr@kookmin.ac.kr
+📌 role: 
+~~~
+
+## 3. Abstract
+
+## 4. 소개 영상
+
+## 5. 결과 영상
