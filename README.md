@@ -4,6 +4,8 @@
 <img src="https://user-images.githubusercontent.com/29452744/77546871-d780c100-6eef-11ea-8442-c5b4efdbd5bc.png"></center>
 </p>
 
+팀페이지 주소 : https://kookmin-sw.github.io/capstone-2020-21/
+
 ## 1. 프로젝트 개요
 
    이 프로젝트는 Eye-tracking 기술을 이용하여 다양한 포트폴리오를 생성 시켜주는 서비스 플랫폼 개발을 목적으로 한다.
