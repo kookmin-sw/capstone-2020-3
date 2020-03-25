@@ -1,6 +1,6 @@
 # 마이아포(My Eye-tracking Portfolio)
 
-![마이아포 png](https://user-images.githubusercontent.com/29452744/77546871-d780c100-6eef-11ea-8442-c5b4efdbd5bc.png)
+<center><img src="https://user-images.githubusercontent.com/29452744/77546871-d780c100-6eef-11ea-8442-c5b4efdbd5bc.png"></center>
 
 ## 1. 프로젝트 개요
 
