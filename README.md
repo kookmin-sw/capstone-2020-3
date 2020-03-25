@@ -12,7 +12,7 @@
 
 #### 최락준
 
-<img src="https://user-images.githubusercontent.com/29452744/77547416-82917a80-6ef0-11ea-8508-21c7982772b9.png" width="90%"></img>
+<img src="https://user-images.githubusercontent.com/29452744/77547416-82917a80-6ef0-11ea-8508-21c7982772b9.png" width="30%"></img>
 ~~~
 📧 email: choirak0805@kookmin.ac.kr
 📌 role: 팀장, Eyetracking DB연결 및 구축, REST API 개발
