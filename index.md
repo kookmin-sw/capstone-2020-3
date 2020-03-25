@@ -15,7 +15,7 @@
 ## 2. 팀 소개
 
 #### 이시윤 교수님
-<img src="https://s3.ap-northeast-2.amazonaws.com/grepp-cloudfront/programmers_imgs/learn/instructor_img/instructor_sheayunLee_charming.png" width="20%"></img>
+<img src="https://s3.ap-northeast-2.amazonaws.com/grepp-cloudfront/programmers_imgs/learn/instructor_img/instructor_sheayunLee_charming.png" width="20%">
 ~~~
 📧 email: sheayun@kookmin.ac.kr
 📌 role: 지도 교수 & 멘토
