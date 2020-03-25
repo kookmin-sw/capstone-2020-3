@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/29452744/77546871-d780c100-6eef-11ea-8442-c5b4efdbd5bc.png"></center>
 </p>
 
-팀페이지 주소 : https://kookmin-sw.github.io/capstone-2020-21/
+#### 팀페이지 주소 : https://kookmin-sw.github.io/capstone-2020-3/
 
 ## 1. 프로젝트 개요
 
