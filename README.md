@@ -63,7 +63,7 @@
 <img src="https://user-images.githubusercontent.com/29452744/77547481-99d06800-6ef0-11ea-8374-b009056220c2.png" width="20%"></img>
 ~~~
 📧 email: xiromjr@kookmin.ac.kr
-📌 role: 웹페이지 구성, 
+📌 role: 웹페이지 구성, 유닛 테스트
 ~~~
 
 ## 3. Abstract
