@@ -90,7 +90,7 @@ After the portfolio is created based on the combined result, the created portfol
 
 ## 4. 소개 영상
 
-[Youtube](https://www.youtube.com/watch?v=2JNPSsK2nXQ, "Project presentation - Youtube link")
+[Youtube 프로젝트 소개 링크](https://www.youtube.com/watch?v=2JNPSsK2nXQ, "Project presentation - Youtube link")
 
 ## 5. 결과 영상
 수정 예정
