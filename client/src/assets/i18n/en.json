@@ -1,0 +1,468 @@
+{
+    "LABELS": {
+        "TITLE": {
+            "STORE_NAME_FOR_SEARCH":"Store name Or Product name",
+            "LIKE_COUNT":"Like",
+            "COMMENT_COUNT":"Comment"
+        }
+    },
+    "SIGN_UP": {
+        "TITLE": "Sign Up",
+        "LABELS":{
+            "EMAIL":"Email",
+            "PASSWORD":"Password",
+            "PASSWORD_CONFIRM":"Confirm Password",
+            "FIRST_NAME":"First Name",
+            "LAST_NAME":"Last Name",
+            "NICKNAME":"Nick Name",
+            "NICKNAME_OPTION":"Nick Name-Option"
+        },
+        "INPUT_PLACEHOLDER":{
+            "EMAIL":"Email",
+            "PASSWORD":"Password",
+            "PASSWORD_CONFIRM":"Confirm Password",
+            "FIRST_NAME":"First Name",
+            "LAST_NAME":"Last Name",
+            "NICKNAME":"Nick Name"
+        },
+        "MESSAGE":{
+            "EMAIL":"Please enter your email address for login.",
+            "ERROR":{
+                "EMAIL":"Please enter your email using a valid email format!",
+                "USER_ID_EXIST":"This email already exists!",
+                "PASSWORD_OLD":"The password must contain 8 ~ 20 characters made up of letters, numbers and special symbols.",
+                "PASSWORD":"The password must contain 4 ~ 20 characters made up of letters, numbers and special symbols.",
+                "PASSWORD_CONFIRM":"Passwords do not match.",
+                "FIRST_NAME_NULL":"Please enter your first name.",
+                "LAST_NAME_NULL":"Please enter your last name.",
+                "NICKNAME_NULL":"Please enter your nickname."
+            }
+        },
+        "EMAIL_AUTH_INFO":{
+            "TITLE":"E-mail authentication",
+            "LABELS":{
+                
+            },
+            "BUTTON":{
+                "TITLE":"Completed membership"
+            },
+            "MESSAGE": {
+                "SIGN_UP":"An Authentication request e-mail has been sent. Please check your provided e-mail address to complete the process.",
+                "EXIST_ID_FACEBOOK":"You are already registered through Facebook.",
+                "EXIST_ID_KAKAOTALK":"You are already registered through Kakao Talk.",
+                "EXIST_ID_GOOGLEPLUS":"You are already registered through Google+."
+            }
+        }
+    },
+    "SIGN_IN": {
+        "TITLE": "Sign In",
+        "LABELS":{
+            "EMAIL":"Email",
+            "PASSWORD":"Password",
+            "PASSWORD_CONFIRM":"Confirm Password",
+            "FIRST_NAME":"First Name",
+            "LAST_NAME":"Last Name",
+            "NICKNAME":"Nick Name",
+            "NICKNAME_OPTION":"Nick Name-Option"
+        },
+        "MESSAGE":{
+            "ERROR":{
+                "EMAIL":"Please enter your email using a valid email format!",
+                "USER_ID_NONE":"This email does not exist.",
+                "USER_NONE_VERTIFY":"Your membership registration has not been completed.  Please check you inbox for a confirmation e-mail to complete the registration process.",
+                "USER_PWD_WRONG":"Invalid email or password."
+            }
+        }
+    },
+    "SETTINGS": {
+        "TITLE": "Edit Profile",
+        "PW_TITLE": "Edit Password",
+        "OK": "Edit Complete",
+        "ERROR": "Edit Fail",
+        "PW_PREV_ERROR": "Same as previously set password"
+    },
+    "MAP": {
+        "TITLE":"Map",
+        "LABELS": {
+            "MAP_TYPE_CHOICE":"Map Type",
+            "PM2_P_5_CATEGORY_TYPE_KOREAR":"Korea",
+            "PM2_P_5_CATEGORY_TYPE": {
+                "WHO": {
+                    "GOOD": "Good",
+                    "NORMAL": "Moderate",
+                    "CARE": "Unhealthy for sensitive groups",
+                    "BAD": "Unhealthy",
+                    "VBAD": "Very unhealthy",
+                    "DANGER": "Hazardous"
+                },
+                "EU": {
+                    "GOOD": "Good",
+                    "NORMAL": "Moderate",
+                    "CARE": "Unhealthy for sensitive groups",
+                    "BAD": "Unhealthy",
+                    "VBAD": "Very unhealthy"
+                },
+                "KO": {
+                    "GOOD": "Good",
+                    "NORMAL": "Moderate",
+                    "BAD": "Unhealthy",
+                    "VBAD": "Very unhealthy"
+                }
+            }
+        },
+        "PLACEHOLDER": {
+            "SEARCH_ADDRESS":"Search for a location..."
+        },
+        "BUTTON": {
+            "TITLE":{
+                "START":"Login / Signup",
+                "MAP_TYPE_ROADMAP":"Default",
+                "MAP_TYPE_HYBRID":"Satellite",
+                "LEFT_MENU_SETTING":"Setting"
+            }
+        },
+        "MODAL": {
+            "TITLE" :{
+                "LOCATION_FIND":"Find Location"
+            }
+        },
+        "MESSAGE": {
+            "FIND_MY_CURRENT_LOCATION":"Find location...",
+            "DATA_SEARCH_LOADING":"Searching data...",
+            "DATA_SEARCH_RESULT":"Total %s data found.",
+            "CANT_SHOW":"Can't show",
+            "NO_SHARE_INFO":"Can't show Because it's indoor data and doesn't share any information"
+        }
+    },
+    "USER_LIST": {
+        "TITLE":"User List",
+        "LABELS":{
+
+        },
+        "MESSAGE": {
+            "NOT_FOUND":"There are no registered user."
+        }
+    },
+    "DEVICE": {
+        "LABELS": {
+            "DEFAULT": {
+                "NAME":"Name",
+                "DESC":"Description",
+                "SENSOR_ID":"Sensor ID (Chip Id)",
+                "SERIAL_NUMBER":"Serial Number",
+                "INOUT_TYPE": {
+                    "TITLE":"Install Type",
+                    "ITEMS": { 
+                        "INNER":"Inside",
+                        "OUTER":"Outside"
+                    }
+                },
+                "RUN_YN":"Run",
+                "CATEGORY_TYPE": {
+                    "TITLE":"Category",
+                    "ITEMS": {
+                        "RESIDENTIAL":"Residential",
+                        "COMMERCIAL":"Commerical",
+                        "INDUSTRIAL":"Industrial",
+                        "GREEN":"Green",
+                        "OTHERS":"Others"
+                    }
+                },
+                "IS_DATA_SHARE":"Do you want to share your data with the public?",
+                "IS_DEVICE_RUN":"Do you want to activate this device?  Note:  This will power the unit on if it isn't already turned on and allow the device to upload data to the database.",
+                "THINGSPEAK_PRIVACY_API_KEY":"ThingSpeak Write API Key",
+                "IS_THINGSPEAK_SHARE":"Do you want to save to ThingSpeak?",
+                "IS_THINGSPEAK_CURRENT_LOCATION":"Do you want to save the location?",
+                "IS_LUFTDATEN_SHARE":"Do you want to save to Luftdaten?",
+                "LUFTDATEN_SENSOR_ID":"Sensor ID (Chip Id)",
+                "LUFTDATEN_VERSION":"Firmware Version",
+                "LUFTDATEN_SENSOR_BOARD_TYPE":"Sensor Board",
+                "LUFTDATEN_SENSOR_TYPE":"Sensor Type : X-Pin ",
+                "IS_LUFTDATEN_CURRENT_LOCATION":"Do you want to save the location?"
+            },
+            "PRODUCT": {
+                "MODEL_NUMBER":"Model Number",
+                "PM1":"pm1.0",
+                "PM25":"pm2.5",
+                "PM10":"pm10",
+                "TEMP":"Temperature",
+                "HUMIDITY":"Humidity",
+                "CO":"CO",
+                "CO2":"CO2",
+                "VOC":"VOC",
+                "HCHO":"HCHO",
+                "GPS":"GPS",
+                "MEOMORY_CARD":"Memory Card",
+                "NONE":"None",
+                "TEMP_WIDGET_TITLE":"Temperature (°C)",
+                "TEMP_WIDGET_F_TITLE":"Temperature (°F)",
+                "HUMIDITY_WIDGET_TITLE":"Humidity (%)",
+                "CO_WIDGET_TITLE":"CO (ppm)",
+                "CO2_WIDGET_TITLE":"CO2 (ppm)",
+                "PHOTO":"Device Photo"
+            },
+            "LOCATION":{
+                "DEFAULT":"Location",
+                "IS_LOCATION_SHARE":"Do you want to share the location?",
+                "LOCATION_LAT":"Latitude",
+                "LOCATION_LNG":"Longitude",
+                "OTHER_STATION":"Measuring station",
+                "LOCATION_ADDRESS":"Address",
+                "LOCATION_ZIPCODE":"Zipcode",
+                "LOCATION_CITY":"City",
+                "LOCATION_COUNTRY":"Country",
+                "LOCATION_DESC":"Location Description",
+                "FLOOR":"Floor",
+                "ALTITUDE":"Altitude",
+                "PHOTO":"Location Photo"
+            },
+            "PRIVACY": {
+                "IS_PRIVACY_SHARE":"Do you want to share the information below?",
+                "LAND_USE_TYPE":{
+                    "TITLE":"Land use",
+                    "ITEMS": {
+                        "RESIDENTIAL":"Residential",
+                        "OFFICE":"Office",
+                        "COMMERCIAL":"Commercial",
+                        "INDUSTRIAL":"Industrial",
+                        "ROAD":"Road",
+                        "GREEN_SPACE":"Green Space",
+                        "VACANT":"Vacant",
+                        "OTHERS":"Other"
+                    }
+                },
+                "RESIDENT_TYPE": {
+                    "TITLE":"Resident Type",
+                    "ITEMS": {
+                        "SINGLE_HOUSE":"Single House",
+                        "VILLA":"Multiplex",
+                        "APARTMENT":"Apartment",
+                        "OTHERS":"Other"
+                    }
+                },
+                "COMMERCIAL_TYPE": {
+                    "TITLE":"Commercial Type",
+                    "ITEMS": {
+                        "FOOD":"Food",
+                        "RETAIL":"Retail",
+                        "OTHERS":"Other"
+                    }
+                },
+                "INDUSTRIAL_TYPE":{
+                    "TITLE":"Industrial Type",
+                    "ITEMS": {
+                        "SMALL_WORKSHOP":"Small Workshop",
+                        "LIGHT_INDUSTRY":"Light Industry",
+                        "HEAVY_INDUSTRY":"Heavy Industry",
+                        "OTHERS":"Other"
+                    }
+                },
+                "GREEN_SPACE_TYPE":{
+                    "TITLE":"Green space",
+                    "ITEMS": {
+                        "NONE":"None",
+                        "PARK":"Park",
+                        "MOUNTAIN":"Mountain",
+                        "FARMLAND":"Farmland"
+                    }
+                },
+                "ROAD_TYPE":{
+                    "TITLE":"Is this location close to the road?",
+                    "ITEMS": {
+                        "NONE":"None",
+                        "LANE_1":"1 Lane",
+                        "LANE_2":"2 Lane",
+                        "LANE_3":"3 Lane",
+                        "LANE_4":"4Lane",
+                        "LANE_5":"5 Lane",
+                        "LANE_6":"6 Lane",
+                        "LANE_7":"7 Lane",
+                        "LANE_8":"More than 8 lanes"
+                    }
+                },
+                "IS_CLOSE_LIGHT_OR_HEAVY_INDUSTRY":"Are you near the light or heavy industry complex zone?",
+                "IS_AIR_CONDITIONER":"Are you using an air conditioner?",
+                "IS_AIR_PURIFIER":"Are you using an air purifier?",
+                "COOK_AT_HOME_FUEL":{
+                    "TITLE":"How do you cook at home?",
+                    "ITEMS": {
+                        "GAS":"Gas",
+                        "ELECTRIC":"Electricity",
+                        "COAL":"Coal",
+                        "WOOD":"Wood",
+                        "OTHERS":"Other"
+                    }
+                },
+                "IS_HAVE_BAY":"Do you have a baby under 5?",
+                "IS_PREGNANT_HAVE":"Do you have a pregnant women?",
+                "IS_CLOSE_HIGHWAY":"Is this location close to the road?",
+                "IS_CLOSE_INDUSTRY":"Is this location close to a factory?",
+                "IS_CHILDREN_HAVE":"Are there children living in this location?",
+                "IS_SENIOR_UP_65_HAVE":"Are there elderly people(65+) living in this location?"
+            }
+        },
+        "MESSAGE" :{
+            "CONFIRM": {
+                "DEVICE_DELETE":"Do you want to delete this device information?"
+            }
+        }
+    },
+    "DEVICE_LIST": {
+        "TITLE":"List",
+        "LABELS": {
+            "LIKES":"Like",
+            "COMMENTS":"Comment",
+            "REFRESHER_PULLING":"Pull to refresh",
+            "REFRESHER_LOADING":"Loading...",
+            "INFINITE_SCROLL_LOADING":"Loading more data..."
+        },
+        "MESSAGE": {
+            "NOT_FOUND":"There are no registered devices."
+        }
+    },
+    "TRENDS": {
+        "TITLE":"Trends",
+        "LABELS":{
+
+        },
+        "PLACEHOLDER": {
+            "SEARCH_DEVICE":"Divice name"
+        }
+    },
+    "DOCUMENT":{
+        "HOW_TO_SETUP" : "Setting fine dust device",
+        "SIGN_UP" : " Connect to this site and sign up",
+        "REGISTER" : "Register your new device.",
+        "ENTER_NAME" : "Enter the name as a distinguishable name for the equipment.",
+        "ENTER_SENSOR_ID" : "For Sensor ID, enter the number that appears on the boot screen.",
+        "ENTER_MODEL_NUM_AND_SERIAL_NUM" : "Model number, serial number, please enter the information that is described in the equipment.",
+        "FOR_DEVELOPMENT" : "For development test equipment, leave it blank if it is not listed.",
+        "OTHER_PLACES" : "Please fill in the information about the place according to the situation.",
+        "STORE_VALUE" : "It stores this value to upload the sensor's data here.",
+        "CONNECT_WIFI" : "Connect to the fine dust device with WiFi.",
+        "BROWSER_DOSE_NOT_APPEAR" : "If the browser window does not appear automatically after connecting to the sensor device, please connect to http://192.168.1.1/ with a web browser.",
+        "ENTER_KEY" : "Change the device mode to Online, enter Wi-Fi information in network settings, and enter the key information from Mise.Today.",
+        "UPDATE" : "How to update the firmware",
+        "WINDOWS" : "Windows",
+        "MAC" : "macOS",
+        "UNCOMPRESS" : "Uncompress and run \"mise_today_firmware_uploader.exe\".",
+        "DRIVER_IS_NOT_INSTALLED" : "If the driver is not installed, the driver installation screen appears automatically. Install the driver.",
+        "CONNECT_USB" : "Connect the USB cable.",
+        "USB_DETAILS" : "You should use the USB port on the board, not the USB port on the battery side.",
+
+        "Q" : "Q: Do not go to the measurement screen from the boot screen.",
+        "A" : "A: There may be a power shortage. Please try again after charging the battery."
+    },
+    "BUTTONS": {
+        "TITLE" : {
+            "SORT_LAST":"Last",
+            "SORT_DISTANCE":"Distance",
+            "SKIP" : "Skip",
+            "BACK" : "Back",
+            "START_EMAIL":"Start with email",
+            "START_FACEBOOK":"Start with Facebook",
+            "START_KAKAOTALK":"Start with Kakaotalk",
+            "START_GOOGLEPLUS":"Start with Google+",
+            "LOGIN_EMAIL":"Login with email",
+            "LOGIN_FACEBOOK":"Login with Facebook",
+            "LOGIN_KAKAOTALK":"Login with Kakaotalk",
+            "LOGIN_GOOGLEPLUS":"Login with Google+",
+            "SIGN_UP":"SignUp",
+            "SIGN_UP_EMAIL":"SignUp with email",
+            "SIGN_UP_FACEBOOK":"SignUp with Facebook",
+            "SIGN_UP_KAKAOTALK":"SignUp with Kakaotalk",
+            "SIGN_UP_GOOGLEPLUS":"SignUp with Google+",
+            "LOGIN":"Login",
+            "LOGOUT":"Logout",
+            "PREVIOUS":"Previous",
+            "NEXT":"Next",
+            "DUPLICATE":"Duplcate",
+            "YES":"Yes",
+            "NO":"No",
+            "OK":"Ok",
+            "DONE":"Done",
+            "CANCEL":"Cancel",
+            "CLOSE":"Close",
+            "SAVE":"Save",
+            "EDIT":"Edit",
+            "UPDATE":"Update",
+            "DELETE":"Delete",
+            "EXIT":"Exit",
+            "JOIN":"Join",
+            "LEAVE":"Leave",
+            "CHANGE":"Edit",
+            "LIKE":"Like",
+            "COMMENT":"Comment",
+            "SHARE":"Share",
+            "INSTALL":"Install",
+            "DETAIL_VIEW":"View",
+            "SEARCH":"Search"
+        } 
+    },
+    "CHECKBOX":{
+        "TITLE":{
+            "TEMP":"Temperature",
+            "WIND":"Wind",
+            "WIND_SPEED":"Wind speed",
+            "OTHER_STATIONS":"Station",
+            "OTHER_FACTORIES":"Factory"
+        }
+    },
+    "SELECT": {
+        "OPTION":{
+            "LABELS":{
+                "GENDER_H":"Hidden",
+                "GENDER_F":"Female",
+                "GENDER_M":"Male",
+                "GENDER_O":"Other"
+            }
+        }
+    },
+    "ALERT": {
+        "TITLE": {
+            "NOTIFY": "Notice",
+            "DEFAULT":"Warning",
+            "SIGN_UP_JOIN" : "SignUp",
+            "USER_IN_UPDATE": "Update User Info",
+            "MAP_LOCATION_SETTING":"Location Setting"
+        }
+    },
+    "MESSAGE": {
+        "LOADING": {
+            "DEFAULT":"Loading...",
+            "SEARCHING":"Searching...",
+            "WAIT":"Please wait..."
+        },
+        "CONFIRM": {
+            "MAP_CURRENT_LOCATION_RETRY":"Could not find your current location.  Would you like to try again?"
+        },
+        "INFO": {
+            "SERVICE_READY": "Sorry. Service is in preparation.",
+            "CHANGE_USER_PWD_SUCCESS":"Success. Your password has been changed.",
+            "INIT_LIST_NOT_FOUND":"Search via keyword.",
+            "LIST_NOT_FOUND":"No list Found",
+            "OPTION_CHOICE":"Option"
+        },
+        "WARN": {
+            "ADD_DATA_VALIDATE":"(*) is a required field.",
+            "CURRENT_LOCATION_INVALID":"Please set your current location.",
+            "TAG_DATA_TOTAL_INVALID":"Total %s tags can not be entered."
+        },
+        "ERROR": {
+            "REQUIRED":"This is required.",
+            "SIGN_UP_JOIN":"There was an error registering. Please sign up again in a few moments.",
+            "USER_IN_UPDATE":"There was an error updating. Please update again in a few moments.",
+            "SYSTEM":"A system error has occurred. Please try again later.",
+            "CHANGE_USER_PWD_PREVIOUS_SAME":"Same as current password. Please enter a different password.",
+            "GEO_LOCATION_PERMISSION_DENIED":"Access to location information denied!",
+            "GEO_LOCATION_POSITION_UNAVAILABLE":"GPS is not working!",
+            "GEO_LOCATION_DETERMINED":"Your location could not be determined.",
+            "GPS_TIMEOUT":"Cannot find current location due to timeout. Check if location setting is turned on. It is also impossible to get the location if this device is indoor.",
+            "MAP_IS_NOT_READY":"Map is not ready yet. Please try again.",
+            "NETWORK_CONNECTION_NONE":"You are not currently connected to the network. Please try again.",
+            "NO_RECENT_DAYS_DATA": "under maintenance.",
+            "NO_RECENT_DATA": "There is no data for the last 24 hours."
+        }
+    }
+
+}

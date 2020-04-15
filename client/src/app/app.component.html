@@ -1,3 +1,6 @@
 <app-navbar></app-navbar>
+<ngx-spinner *ngIf="removeNav()" bdColor="rgba(51,51,51,0.7)" size="default" color="#fff" type="ball-atom" fullScreen="false">
+    <p style="color: white;">{{ 'MESSAGE.LOADING.WAIT' | translate}}</p>
+</ngx-spinner>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<!-- <app-footer *ngIf="removeFooter()"></app-footer> -->

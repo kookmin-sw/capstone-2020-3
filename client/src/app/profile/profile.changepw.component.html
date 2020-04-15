@@ -1,0 +1,36 @@
+<div class="card card-register">
+    <h3 class="title">Change Password
+        <button type="button" class="close" aria-label="Close" (click)="closeModal('')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </h3>
+    <br>
+
+    <form [formGroup]="passwordForm" class="register-form" (ngSubmit)="onSubmit()">
+        <!-- 새 비밀번호 -->
+        <label for="newPassWord">New Password</label>
+        <div class="input-group form-group-no-border">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="nc-icon nc-key-25"></i>
+                </span>
+            </div>
+            <input name="password" type="password" formControlName="password" class="form-control" placeholder="New Password">
+            <div *ngIf="submitted && f.password.errors" class="form-control-feedback">
+                <div *ngIf="f.password.errors.required || f.password.errors.minlength || f.password.errors.maxlength">{{ 'SIGN_UP.MESSAGE.ERROR.PASSWORD' | translate }}</div>
+            </div>
+        </div>
+        <!-- 비밀번호 확인 -->
+        <label for="newPassWordCheck" fontAttributes="Bold">New Password Check</label>
+        <div class="input-group form-group-no-border">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="nc-icon nc-key-25"></i>
+                </span>
+            </div>
+            <input name="passwordCheck" type="password" formControlName="passwordCheck" class="form-control" placeholder="New Password Check">
+            <div *ngIf="submitted && passwordForm.hasError('mismatchedPasswords')" class="form-control-feedback"> {{ 'SIGN_UP.MESSAGE.ERROR.PASSWORD_CONFIRM' | translate }}</div>
+        </div>
+        <button class="btn btn-default btn-block btn-round">{{ 'BUTTONS.TITLE.UPDATE' | translate }}</button>
+    </form>
+</div>

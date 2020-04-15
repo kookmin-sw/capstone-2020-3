@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd, NavigationStart } from '@angular/router';
-import { Location, PopStateEvent } from '@angular/common';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
+
+import { AuthenticationService } from '../../_services/authentication.service';
 
 @Component({
     selector: 'app-navbar',
@@ -8,49 +11,113 @@ import { Location, PopStateEvent } from '@angular/common';
     styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-    public isCollapsed = true;
-    private lastPoppedUrl: string;
-    private yScrollStack: number[] = [];
+    private toggleButton: any;
+    private sidebarVisible: boolean;
 
-    constructor(public location: Location, private router: Router) {
+    constructor(
+        private router: Router,
+        private element : ElementRef,
+        public location: Location, 
+        public authService: AuthenticationService    
+    ) {
+        this.sidebarVisible = false;
     }
 
     ngOnInit() {
-      this.router.events.subscribe((event) => {
-        this.isCollapsed = true;
-        if (event instanceof NavigationStart) {
-           if (event.url != this.lastPoppedUrl)
-               this.yScrollStack.push(window.scrollY);
-       } else if (event instanceof NavigationEnd) {
-           if (event.url == this.lastPoppedUrl) {
-               this.lastPoppedUrl = undefined;
-               window.scrollTo(0, this.yScrollStack.pop());
-           } else
-               window.scrollTo(0, 0);
-       }
-     });
-     this.location.subscribe((ev:PopStateEvent) => {
-         this.lastPoppedUrl = ev.url;
-     });
+        const navbar: HTMLElement = this.element.nativeElement;
+        this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     }
+    sidebarOpen() {
+        const toggleButton = this.toggleButton;
+        const html = document.getElementsByTagName('html')[0];
+        // console.log(html);
+        // console.log(toggleButton, 'toggle');
 
+        setTimeout(function(){
+            toggleButton.classList.add('toggled');
+        }, 500);
+        html.classList.add('nav-open');
+
+        this.sidebarVisible = true;
+    };
+    sidebarClose() {
+        const html = document.getElementsByTagName('html')[0];
+        // console.log(html);
+        this.toggleButton.classList.remove('toggled');
+        this.sidebarVisible = false;
+        html.classList.remove('nav-open');
+    };
+    sidebarToggle() {
+        // const toggleButton = this.toggleButton;
+        // const body = document.getElementsByTagName('body')[0];
+        if (this.sidebarVisible === false) {
+            this.sidebarOpen();
+        } else {
+            this.sidebarClose();
+        }
+    };
     isHome() {
-        var titlee = this.location.prepareExternalUrl(this.location.path());
+        let titlee = this.location.prepareExternalUrl(this.location.path());
 
-        if( titlee === '#/home' ) {
+        if( titlee === '/home' ) {
             return true;
         }
         else {
             return false;
         }
     }
-    isDocumentation() {
-        var titlee = this.location.prepareExternalUrl(this.location.path());
-        if( titlee === '#/documentation' ) {
+    isMap(){
+        let titlee = this.location.prepareExternalUrl(this.location.path());
+
+        if( titlee === '/map' ) {
             return true;
         }
         else {
             return false;
         }
+    }
+    isLogin() {
+        const currentUser = this.authService.currentUserValue;
+        //console.log("currentUser", currentUser);
+        if (currentUser) {
+            // authorised so return true
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    isAdmin() {
+        const currentUser: any = this.authService.currentUserValue;
+        if (currentUser && currentUser.userInfo && currentUser.userInfo["isAdminUserYn"] == "Y") {
+            // authorised so return true
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    isDocumentation() {
+        let titlee = this.location.prepareExternalUrl(this.location.path());
+        if( titlee === '/documentation' ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    doLogout(){
+        this.authService.logout()
+        .pipe(first())
+        .subscribe(
+            data => {
+                if(!data.error){
+                    this.router.navigate(['/']);
+                }
+            },
+            error => {
+                
+            });
     }
 }

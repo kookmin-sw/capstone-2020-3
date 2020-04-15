@@ -1,0 +1,469 @@
+{
+    "LABELS": {
+        "TITLE": {
+            "STORE_NAME_FOR_SEARCH":"상호명 및 제품명",
+            "LIKE_COUNT":"좋아요",
+            "COMMENT_COUNT":"댓글"
+        }
+    },
+    "SIGN_UP": {
+        "TITLE": "회원가입",
+        "LABELS":{
+            "EMAIL":"이메일",
+            "PASSWORD":"비밀번호",
+            "PASSWORD_CONFIRM":"비밀번호 확인",
+            "FIRST_NAME":"이름",
+            "LAST_NAME":"이름(성)",
+            "NICKNAME":"닉네임(별명)",
+            "NICKNAME_OPTION":"닉네임(별명)-선택"
+        },
+        "INPUT_PLACEHOLDER":{
+            "EMAIL":"이메일",
+            "PASSWORD":"비밀번호",
+            "PASSWORD_CONFIRM":"비밀번호 확인",
+            "FIRST_NAME":"이름",
+            "LAST_NAME":"이름(성)",
+            "NICKNAME":"닉네임(별명)"
+        },
+        "MESSAGE":{
+            "EMAIL":"로그인시 사용하실 Email을 입력해주세요.",
+            "ERROR":{
+                "EMAIL":"이메일을 형식에 맞게 입력해주세요!",
+                "USER_ID_EXIST":"이미 가입한 회원입니다.",
+                "PASSWORD_OLD":"영문,숫자,특수기호 등을 조합하여 8~20자리 입력해주세요.",
+                "PASSWORD":"글자 4~20자리 입력해주세요.",
+                "PASSWORD_CONFIRM":"비밀번호가 일치하지 않습니다.",
+                "FIRST_NAME_NULL":"이름을 입력해 주세요.",
+                "LAST_NAME_NULL":"이름(성)을 입력해 주세요.",
+                "NICKNAME_NULL":"닉네임을 입력해 주세요."
+            }
+        },
+        "EMAIL_AUTH_INFO": {
+            "TITLE":"Email 인증",
+            "LABELS": {
+                
+            },
+            "BUTTON": {
+                "TITLE":"회원가입 완료"
+            },
+            "MESSAGE": {
+                "SIGN_UP":"입력하신 Email로 인증 요청 메일을 발송했습니다.메일함 확인 후 인증하기 버튼을 선택해주세요.",
+                "EXIST_ID_FACEBOOK":"이미 Facebook으로 회원가입을 하셨습니다.",
+                "EXIST_ID_KAKAOTALK":"이미 카카오톡 KakaoTalk으로 회원가입을 하셨습니다.",
+                "EXIST_ID_GOOGLEPLUS":"이미 Google+로 회원가입을 하셨습니다."
+            }
+        }
+    },
+    "SIGN_IN": {
+        "TITLE": "로그인",
+        "LABELS":{
+            "EMAIL":"이메일",
+            "PASSWORD":"비밀번호",
+            "PASSWORD_CONFIRM":"비밀번호 확인",
+            "FIRST_NAME":"이름",
+            "LAST_NAME":"이름(성)",
+            "NICKNAME":"닉네임(별명)",
+            "NICKNAME_OPTION":"닉네임(별명)-선택"
+        },
+        "MESSAGE":{
+            "ERROR":{
+                "EMAIL":"이메일을 형식에 맞게 입력해주세요!",
+                "USER_ID_NONE":"해당 이메일이 존재하지 않습니다.",
+                "USER_NONE_VERTIFY":"회원가입 인증이 완료되지 않았습니다.회원가입시 발송된 인증메일을 완료해 주세요.",
+                "USER_PWD_WRONG":"이메일 혹은 비밀번호가 잘못되었습니다."
+            }
+        }
+    },
+    "SETTINGS": {
+        "TITLE":"프로필 수정",
+        "PW_TITLE":"비밀번호 수정",
+        "OK": "수정 완료",
+        "ERROR": "수정 실패",
+        "PW_PREV_ERROR": "이전에 설정한 비밀번호와 같습니다."
+    },
+    "MAP": {
+        "TITLE":"지도",
+        "LABELS": {
+            "MAP_TYPE_CHOICE":"지도 유형",
+            "PM2_P_5_CATEGORY_TYPE_KOREAR":"대한민국",
+            "PM2_P_5_CATEGORY_TYPE": {
+                "WHO": {
+                    "GOOD": "좋음",
+                    "NORMAL": "보통",
+                    "CARE": "주의",
+                    "BAD": "나쁨",
+                    "VBAD": "매우나쁨",
+                    "DANGER": "위험"
+                },
+                "EU": {
+                    "GOOD": "좋음",
+                    "NORMAL": "보통",
+                    "CARE": "주의",
+                    "BAD": "나쁨",
+                    "VBAD": "매우나쁨"
+                },
+                "KO": {
+                    "GOOD": "좋음",
+                    "NORMAL": "보통",
+                    "BAD": "나쁨",
+                    "VBAD": "매우나쁨"
+                }
+            }
+
+        },
+        "PLACEHOLDER": {
+            "SEARCH_ADDRESS":"위치 찾기"
+        },
+        "BUTTON": {
+            "TITLE":{
+                "START":"로그인 / 회원가입",
+                "MAP_TYPE_ROADMAP":"일반지도",
+                "MAP_TYPE_HYBRID":"위성지도",
+                "LEFT_MENU_SETTING":"설정"
+            }
+        },
+        "MODAL": {
+            "TITLE" :{
+                "LOCATION_FIND":"위치선택"
+            }
+        },
+        "MESSAGE": {
+            "FIND_MY_CURRENT_LOCATION":"현재 위치를 찾는 중입니다.",
+            "DATA_SEARCH_LOADING":"검색중입니다...",
+            "DATA_SEARCH_RESULT":"총 %s개의 데이터가 검색되었습니다.",
+            "NO_SHARE_INFO": "실내 데이터이며, 정보를 공유하지 않기에 보여줄 수 없습니다."
+        }
+    },
+    "USER_LIST": {
+        "TITLE":"사용자 목록",
+        "LABELS":{
+
+        },
+        "MESSAGE": {
+            "NOT_FOUND":"가입한 회원이 없습니다."
+        }
+    },
+    "DEVICE": {
+        "LABELS": {
+            "DEFAULT": {
+                "NAME":"이름",
+                "DESC":"설명",
+                "SENSOR_ID":"Sensor ID (Chip Id)",
+                "SERIAL_NUMBER":"Serial Number",
+                "INOUT_TYPE": {
+                    "TITLE":"설치 장소(실내외)",
+                    "ITEMS": { 
+                        "INNER":"실내",
+                        "OUTER":"실외"
+                    }
+                },
+                "RUN_YN":"작동 유무",
+                "CATEGORY_TYPE": {
+                    "TITLE":"분야",
+                    "ITEMS": {
+                        "RESIDENTIAL":"주거용",
+                        "COMMERCIAL":"상업용",
+                        "INDUSTRIAL":"공업용",
+                        "GREEN":"산림",
+                        "OTHERS":"기타"
+                    }
+                },
+                "IS_DATA_SHARE":"데이터를 외부에 공유하시겠습니까?",
+                "IS_DEVICE_RUN":"장비를 작동시키겠습니까?",
+                "THINGSPEAK_PRIVACY_API_KEY":"ThingSpeak Write API Key",
+                "IS_THINGSPEAK_SHARE":"ThingSpeak에 데이터를 저장하시겠습니까?",
+                "IS_THINGSPEAK_CURRENT_LOCATION":"설치 위치값도 저장하시겠습니까?",
+                "IS_LUFTDATEN_SHARE":"Luftdaten에 데이터를 저장하시겠습니까?",
+                "LUFTDATEN_SENSOR_ID":"Sensor ID (Chip Id)",
+                "LUFTDATEN_VERSION":"Firmware Version",
+                "LUFTDATEN_SENSOR_BOARD_TYPE":"Sensor Board",
+                "LUFTDATEN_SENSOR_TYPE":"Sensor Type : X-Pin ",
+                "IS_LUFTDATEN_CURRENT_LOCATION":"설치 위치값도 저장하시겠습니까?"
+            },
+            "PRODUCT": {
+                "MODEL_NUMBER":"모델번호",
+                "PM1":"pm1.0 센서",
+                "PM25":"pm2.5 센서",
+                "PM10":"pm10 센서",
+                "TEMP":"온도 센서",
+                "HUMIDITY":"습도 센서",
+                "CO":"일산화탄소 센서",
+                "CO2":"이산화탄소 센서",
+                "VOC":"VOC 센서",
+                "HCHO":"HCHO 센서",
+                "GPS":"GPS 센서",
+                "MEOMORY_CARD":"외부 메모리 카드",
+                "NONE":"없음",
+                "TEMP_WIDGET_TITLE":"온도 (°C)",
+                "TEMP_WIDGET_F_TITLE":"온도 (°F)",
+                "HUMIDITY_WIDGET_TITLE":"습도 (%)",
+                "CO_WIDGET_TITLE":"일산화탄소 (ppm)",
+                "CO2_WIDGET_TITLE":"이산화탄소 (ppm)",
+                "PHOTO":"장비 사진"
+            },
+            "LOCATION":{
+                "DEFAULT":"위치설정",
+                "IS_LOCATION_SHARE":"설치장소의 위치를 공유하시겠습니까?",
+                "LOCATION_LAT":"위도(Latitude)",
+                "LOCATION_LNG":"경도(Longitude)",
+                "OTHER_STATION":"근처 외부 관측소",
+                "LOCATION_ADDRESS":"주소",
+                "LOCATION_ZIPCODE":"우편번호",
+                "LOCATION_CITY":"도시",
+                "LOCATION_COUNTRY":"국가",
+                "LOCATION_DESC":"위치설명",
+                "FLOOR":"층수(Floor)",
+                "ALTITUDE":"고도",
+                "PHOTO":"설치 장소"
+            },
+            "PRIVACY": {
+                "IS_PRIVACY_SHARE":"아래 내용의 정보를 공유하시겠습니까?",
+                "LAND_USE_TYPE":{
+                    "TITLE":"토지 이용",
+                    "ITEMS": {
+                        "RESIDENTIAL":"주거",
+                        "OFFICE":"오피스",
+                        "COMMERCIAL":"상업",
+                        "INDUSTRIAL":"산업",
+                        "ROAD":"도로",
+                        "GREEN_SPACE":"녹지",
+                        "VACANT":"공터",
+                        "OTHERS":"기타"
+                    }
+                },
+                "RESIDENT_TYPE": {
+                    "TITLE":"주거 종류",
+                    "ITEMS": {
+                        "SINGLE_HOUSE":"단독주택",
+                        "VILLA":"빌라",
+                        "APARTMENT":"아파트",
+                        "OTHERS":"기타"
+                    }
+                },
+                "COMMERCIAL_TYPE": {
+                    "TITLE":"상업 종류",
+                    "ITEMS": {
+                        "FOOD":"음식",
+                        "RETAIL":"소매",
+                        "OTHERS":"기타"
+                    }
+                },
+                "INDUSTRIAL_TYPE":{
+                    "TITLE":"산업 종류",
+                    "ITEMS": {
+                        "SMALL_WORKSHOP":"가내 수공업",
+                        "LIGHT_INDUSTRY":"경공업",
+                        "HEAVY_INDUSTRY":"중공업",
+                        "OTHERS":"기타"
+                    }
+                },
+                "GREEN_SPACE_TYPE":{
+                    "TITLE":"녹지 종류",
+                    "ITEMS": {
+                        "NONE":"없음",
+                        "PARK":"공원",
+                        "MOUNTAIN":"산지",
+                        "FARMLAND":"농지"
+                    }
+                },
+                "ROAD_TYPE":{
+                    "TITLE":"설치된 장소가 도로와 가까이 있습니까?",
+                    "ITEMS": {
+                        "NONE":"없음",
+                        "LANE_1":"1차선",
+                        "LANE_2":"2차선",
+                        "LANE_3":"3차선",
+                        "LANE_4":"4차선",
+                        "LANE_5":"5차선",
+                        "LANE_6":"6차선",
+                        "LANE_7":"7차선",
+                        "LANE_8":"8차선 이상"
+                    }
+                },
+                "IS_CLOSE_LIGHT_OR_HEAVY_INDUSTRY":"근처에 경.중공업단지가 가깝습니까?",
+                "IS_AIR_CONDITIONER":"설치된 장소에 에이컨이 있습니까?",
+                "IS_AIR_PURIFIER":"설치된 장소에 공기청정기가 있습니까?",
+                "COOK_AT_HOME_FUEL":{
+                    "TITLE":"집에서 어떻게 음식을 합니까?",
+                    "ITEMS": {
+                        "GAS":"가스",
+                        "ELECTRIC":"전기",
+                        "COAL":"연탄",
+                        "WOOD":"나무",
+                        "OTHERS":"기타"
+                    }
+                },
+                "IS_HAVE_BAY":"설치된 장소에 유아(5세미만)가 있습니까?",
+                "IS_PREGNANT_HAVE":"설치된 장소에 임산부가 있습니까?",
+
+                "IS_CLOSE_HIGHWAY":"설치된 장소가 도로와 가까이 있습니까?",
+                "IS_CLOSE_INDUSTRY":"설치된 장비가 공장지대에서 가까이 있습니까?",
+                "IS_CHILDREN_HAVE":"설치된 장소에 18세 미만의 아동이 있습니까?",
+                "IS_SENIOR_UP_65_HAVE":"설치된 장소에 65세 이상의 어르신이 계십니까?"
+            }
+        },
+        "MESSAGE" :{
+            "CONFIRM": {
+                "DEVICE_DELETE":"해당 디바이스 정보를 전부 삭제 하시겠습니까?"
+            }
+        }
+    },
+    "DEVICE_LIST": {
+        "TITLE":"목록",
+        "LABELS": {
+            "LIKES":"좋아요",
+            "COMMENTS":"댓글",
+            "REFRESHER_PULLING":"새로운 데이터를 가져오려면 아래로 당겨주세요.",
+            "REFRESHER_LOADING":"로딩중...",
+            "INFINITE_SCROLL_LOADING":"로딩중..."
+        },
+        "MESSAGE": {
+            "NOT_FOUND":"등록된 장비가 없습니다."
+        }
+    },
+    "TRENDS": {
+        "TITLE":"추세",
+        "LABELS":{
+
+        },
+        "PLACEHOLDER": {
+            "SEARCH_DEVICE":"등록된 이름"
+        }
+    },
+    "DOCUMENT":{
+        "HOW_TO_SETUP" : "미세먼지 기기 설정",
+        "SIGN_UP" : "에 접속하여 가입을 합니다.",
+        "REGISTER" : "새 기기를 등록합니다.",
+        "ENTER_NAME" : "이름은 장비를 구분할 수 있는 이름으로 입력하세요.",
+        "ENTER_SENSOR_ID" : "Sensor ID는 부팅화면에 나오는 숫자를 입력하세요.",
+        "ENTER_MODEL_NUM_AND_SERIAL_NUM": "모델번호, Serial Number는 장비에 기재되어 있는 정보를 입력해주세요.",
+        "FOR_DEVELOPMENT" : "개발 테스트용 장비에는 따로 기재되어 있지 않은 경우 빈칸으로 두시면 됩니다.",
+        "OTHER_PLACES" : "이외는 장소에 대한 정보들을 상황에 맞게 기입해주세요.",
+        "STORE_VALUE" : "센서의 데이터를 이곳에 업로드하기 위한 이 값을 저장한다.",
+        "CONNECT_WIFI" : "와이파이로 미세먼지 기기에 접속합니다.",
+        "BROWSER_DOSE_NOT_APPEAR" : "센서 장비에 연결 뒤 브라우저창이 자동으로 뜨지 않는 경우 웹브라우저로 http://192.168.1.1/로 접속한다.",
+        "ENTER_KEY" : "기기 모드를 Online으로 바꾸고 네트워크설정에서 와이파이 정보를 입력하고 Mise.Today에서 발급받은 Key정보를 입력합니다.",
+        "UPDATE" : "펌웨어 업데이트 방법",
+        "WINDOWS" : "윈도우",
+        "MAC" : "맥",
+        "UNCOMPRESS" : "압축을 푼 뒤 \"mise_today_firmware_uploader.exe\"를 실행합니다.",
+        "DRIVER_IS_NOT_INSTALLED" : "드라이버가 설치되어있지 않은 경우 자동으로 드라이버 설치화면이 나옵니다. 드라이버를 설치합니다.",
+        "CONNECT_USB" : "USB케이블을 연결합니다.",
+        "USB_DETAILS" : "배터리 쪽 USB포트가 아닌 보드상의 USB포트를 이용하여야합니다.",
+        "Q" : "Q: 부팅화면에서 측정값화면으로 넘어가지않습니다.",
+        "A" : "A: 전력부족일 가능성이 있습니다. 배터리 충전 후 다시 시도해보세요."
+        
+    },
+    "BUTTONS": {
+        "TITLE" : {
+            "SORT_LAST":"최신순",
+            "SORT_DISTANCE":"거리순",
+            "SKIP" : "넘어가기",
+            "BACK" : "뒤로",
+            "START_EMAIL":"Email로 시작하기",
+            "START_FACEBOOK":"Facebook으로 시작하기",
+            "START_KAKAOTALK":"카카오톡 KakaoTalk으로 시작하기",
+            "START_GOOGLEPLUS":"Google+로 시작하기",
+            "LOGIN_EMAIL":"Email로 로그인",
+            "LOGIN_FACEBOOK":"Facebook으로 로그인",
+            "LOGIN_KAKAOTALK":"카카오톡 KakaoTalk으로 로그인",
+            "LOGIN_GOOGLEPLUS":"Google+로 로그인",
+            "SIGN_UP":"회원가입",
+            "SIGN_UP_EMAIL":"Email로 회원가입",
+            "SIGN_UP_FACEBOOK":"Facebook으로 회원가입",
+            "SIGN_UP_KAKAOTALK":"카카오톡 KakaoTalk으로 회원가입",
+            "SIGN_UP_GOOGLEPLUS":"Google+로 회원가입",
+            "LOGIN":"로그인",
+            "LOGOUT":"로그아웃",
+            "PREVIOUS":"이전",
+            "NEXT":"다음",
+            "DUPLICATE":"중복확인",
+            "YES":"예",
+            "NO":"아니오",
+            "OK":"확인",
+            "DONE":"적용",
+            "CANCEL":"취소",
+            "CLOSE":"닫기",
+            "SAVE":"저장",
+            "EDIT":"수정",
+            "UPDATE":"수정",
+            "DELETE":"삭제",
+            "EXIT":"종료",
+            "JOIN":"가입",
+            "LEAVE":"탈퇴",
+            "CHANGE":"변경",
+            "LIKE":"좋아요",
+            "COMMENT":"댓글",
+            "SHARE":"공유",
+            "INSTALL":"설치하기",
+            "DETAIL_VIEW":"상세정보",
+            "SEARCH":"찾기"
+        } 
+    },
+    "CHECKBOX":{
+        "TITLE":{
+            "TEMP":"온도",
+            "WIND":"바람",
+            "WIND_SPEED":"바람세기",
+            "OTHER_STATIONS":"관측소",
+            "OTHER_FACTORIES":"공장"
+        }
+    },
+    "SELECT": {
+        "OPTION":{
+            "LABELS":{
+                "GENDER_H":"비공개",
+                "GENDER_F":"여성",
+                "GENDER_M":"남성",
+                "GENDER_O":"기타"
+            }
+        }
+    },
+    "ALERT": {
+        "TITLE": {
+            "NOTIFY": "알림",
+            "DEFAULT": "경고",
+            "SIGN_UP_JOIN" : "회원가입",
+            "USER_IN_UPDATE": "회원정보 수정",
+            "MAP_LOCATION_SETTING":"위치설정"
+        }
+    },
+    "MESSAGE": {
+        "LOADING": {
+            "DEFAULT":"로딩중...",
+            "SEARCHING":"검색중...",
+            "WAIT":"잠시만 기다려 주세요."
+        },
+        "CONFIRM": {
+            "MAP_CURRENT_LOCATION_RETRY":"현재 위치를 찾지못했습니다. 다시 시도하시겠습니까?"
+        },
+        "INFO": {
+            "SERVICE_READY": "죄송합니다. 서비스 준비중입니다.",
+            "CHANGE_USER_PWD_SUCCESS":"비밀번호가 변경되었습니다.",
+            "INIT_LIST_NOT_FOUND":"상호명 및 제품명으로 검색해 주시기 바랍니다.",
+            "LIST_NOT_FOUND":"검색된 목록이 없습니다.",
+            "OPTION_CHOICE":"선택 사항입니다."
+        },
+        "WARN": {
+            "ADD_DATA_VALIDATE":"필수입력사항(*)을 입력 혹은 선택하세요.",
+            "CURRENT_LOCATION_INVALID":"현재위치를 설정해 주시기 바랍니다.",
+            "TAG_DATA_TOTAL_INVALID":"총 %s개의 태그를 입력할 수 없습니다."
+        },
+        "ERROR": {
+            "REQUIRED":"필수입력 사항입니다.",
+            "SIGN_UP_JOIN":"회원가입중 오류가 발생하였습니다. 잠시 후 다시 가입해 주시기 바랍니다.",
+            "USER_IN_UPDATE":"회원정보 수정 중 오류가 발생하였습니다. 잠시 후 다시 수정해 주시기 바랍니다.",
+            "SYSTEM":"시스템 오류가 발생하였습니다. 잠시후 다시 시도해 주시기 바랍니다.",
+            "CHANGE_USER_PWD_PREVIOUS_SAME":"현재 비밀번호와 같습니다. 다른 비밀번호를 입력하시기 바랍니다.",
+            "GEO_LOCATION_PERMISSION_DENIED":"위치서비스 사용을 허용하시기 바랍니다.",
+            "GEO_LOCATION_POSITION_UNAVAILABLE":"현재 위치가 확인되지 않습니다.잠시후 다시 시도해 주시기 바랍니다.",
+            "GEO_LOCATION_DETERMINED":"현재 위치가 확인되지 않습니다.잠시후 다시 시도해 주시기 바랍니다.",
+            "GPS_TIMEOUT":"위치설정이 켜져있는지 확인해주세요. 실내에 있는 경우 위치정보가 다를수 있습니다.",
+            "MAP_IS_NOT_READY":"지도설정이 아직 준비되지 않았습니다. 잠시 후 다시시도해 주시기 바랍니다.",
+            "NETWORK_CONNECTION_NONE":"현재 네크워크에 연결되어 있지 않습니다. 잠시 후 다시시도해 주시기 바랍니다.",
+            "NO_RECENT_DAYS_DATA":"기계 점검 중입니다.",
+            "NO_RECENT_DATA": "지난 24 시간 동안의 데이터가 없습니다."
+        }
+    }
+
+}

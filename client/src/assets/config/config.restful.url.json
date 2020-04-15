@@ -1,0 +1,28 @@
+{
+    "BASE_URL":{ 
+        "PREFIX":"/rest/v1"
+    },
+    "RESTFUL_URL": {
+        "USER": {
+            "DEFAULT":"/user/users",
+            "LOGIN":"/user/login",
+            "LOGOUT":"/user/logout",
+            "PW_CHANGE":"/user/userPwdChange"
+        },
+        "DEVICE": {
+            "OTHER_STATIONS":"/device/otherStations",
+            "OTHER_FACTORIES":"/device/otherFactories",
+            "PRIVACY_CODE":"/device/user/privacyCode",
+            "USER_DEFAULT":"/device/user/devices",
+            "UPLOAD_PHOTO_IMAGE":"/device/user/devices/photoImage"
+        },
+        "DATA": {
+            "DEFAULT":"/data/datas",
+            "ONE_DAY_AVG":"/data/datas/oneday",
+            "INTERVAL_DAY_AVG":"/data/datas/intervalday",
+            "SEARCH_HOUR_AVG": "/data/datas/searchHour",
+            "LAST_WIND_DATA":"/data/datas/lastWindData"
+        }
+    }
+
+}

@@ -1,0 +1,66 @@
+<div class="wrapper">
+  <div class="page-header" style="background-image: url('./assets/img/login/login-background.jpg');">
+      <div class="filter"></div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                    <div class="card card-register">
+                        <alert></alert>
+                        <h3 class="title">Sign In</h3>
+                        <div class="social-line text-center">
+                            <a class="btn btn-neutral btn-facebook btn-just-icon" ngbPopover="Preparing service ...">
+                              <i class="fa fa-facebook-square"></i>
+                            </a>
+
+                            <!-- <a href="#pablo" class="btn btn-neutral btn-kakaotalk btn-just-icon">
+                              <i class="fa fa-comment"></i>
+                            </a> -->
+                            <a class="btn btn-neutral btn-google btn-just-icon" ngbPopover="Preparing service ...">
+                              <i class="fa fa-google-plus"></i>
+                            </a>
+                            <!-- <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+                                <i class="fa fa-twitter"></i>
+                            </a> -->
+                        </div>
+                        <form [formGroup]="loginInfoForm" class="register-form" (ngSubmit)="onSubmit()">
+                            <label>Email</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{ 'form-control-danger': submitted && f.userId.errors }">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="nc-icon nc-email-85"></i>
+                                </span>
+                              </div>
+
+                              <input name="userId" type="email" formControlName="userId" class="form-control" placeholder="Email" >
+                              <div *ngIf="submitted && f.userId.errors" class="form-control-feedback">
+                                <div *ngIf="f.userId.errors?.required">{{ 'MESSAGE.ERROR.REQUIRED' | translate }}</div>
+                              </div>
+                            </div>
+
+                            <label>Password</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{ 'form-control-danger': submitted && f.userPwd.errors }">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="nc-icon nc-key-25"></i>
+                                </span>
+                              </div>
+
+                              <input name="userPwd" type="password" formControlName="userPwd" class="form-control" placeholder="Password" >
+                              <div *ngIf="submitted && f.userPwd.errors" class="form-control-feedback">
+                                <div *ngIf="f.userPwd.errors.required">{{ 'MESSAGE.ERROR.REQUIRED' | translate }}</div>
+                              </div>
+                            </div>
+                            <button class="btn btn-black btn-block btn-round">Sign In</button>
+                        </form>
+                        <div class="forgot">
+                          <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="footer register-footer text-center">
+                <h6>&copy;{{today | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Vertices</h6>
+              </div>
+          </div>
+  </div>
+</div>
