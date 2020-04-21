@@ -7,19 +7,9 @@
                       <div class="card card-register">
                           <h3 class="title">Sign Up</h3>
                           <div class="social-line text-center">
-                              <a class="btn btn-neutral btn-facebook btn-just-icon" ngbPopover="Preparing service ...">
-                                <i class="fa fa-facebook-square"></i>
-                              </a>
-
-                              <!-- <a href="#pablo" class="btn btn-neutral btn-kakaotalk btn-just-icon">
+                              <a href="#pablo" class="btn btn-neutral btn-kakaotalk btn-just-icon" ngbPopover="Login with KakaoTalk" triggers="mouseenter:mouseleave">
                                 <i class="fa fa-comment"></i>
-                              </a> -->
-                              <a class="btn btn-neutral btn-google btn-just-icon" ngbPopover="Preparing service ...">
-                                <i class="fa fa-google-plus"></i>
                               </a>
-                              <!-- <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
-                                  <i class="fa fa-twitter"></i>
-                              </a> -->
                           </div>
                           <form [formGroup]="userInfoForm" class="register-form" (ngSubmit)="onSubmit()">
                               <!-- 이메일 -->
@@ -101,7 +91,7 @@
                     </div>
                 </div>
                 <div class="footer register-footer text-center">
-                    <h6>&copy;{{today | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Vertices</h6>
+                  <h6>&copy;{{today | date: 'yyyy'}}, made by Eye-Go<i class="fa fa-heart heart"></i></h6>
                 </div>
             </div>
     </div>

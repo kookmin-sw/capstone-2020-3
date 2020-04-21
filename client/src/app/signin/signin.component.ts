@@ -16,9 +16,9 @@ import { UserService } from '../_services/user.service';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-  today : Date = new Date();
-  loginInfoForm : FormGroup;
-  isSnsSignup : boolean;
+  today: Date = new Date();
+  loginInfoForm: FormGroup;
+  isSnsSignup: boolean;
   submitted = false;
   returnUrl: string;
 
@@ -30,9 +30,9 @@ export class SigninComponent implements OnInit {
     public commonService: CommonService,
     public alertService: AlertService,
     public authService: AuthenticationService,
-    public userService : UserService
-  ) { 
-    if (this.authService.currentUserValue) { 
+    public userService: UserService
+  ) {
+    if (this.authService.currentUserValue) {
       this.router.navigate(['/']);
     }
   }
@@ -40,17 +40,17 @@ export class SigninComponent implements OnInit {
   ngOnInit() {
     this.isSnsSignup = false;
 
-    this.loginInfoForm = this.formBuilder.group({  
-      userId: new FormControl('', Validators.compose([ Validators.required ])),
-      userPwd: new FormControl('', Validators.compose([ Validators.required ]))
+    this.loginInfoForm = this.formBuilder.group({
+      userId: new FormControl('', Validators.compose([Validators.required])),
+      userPwd: new FormControl('', Validators.compose([Validators.required]))
     });
     // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
-  get f() { 
+  get f() {
     //console.log("controls", this.userInfoForm.controls);
-    return this.loginInfoForm.controls; 
+    return this.loginInfoForm.controls;
   }
 
   onSubmit() {
@@ -58,8 +58,8 @@ export class SigninComponent implements OnInit {
 
     // stop here if form is invalid
     if (this.loginInfoForm.invalid) {
-        return;
-    }else{
+      return;
+    } else {
       this.doLogin(this.f.userId.value, this.f.userPwd.value, "email");
     }
   }
@@ -70,31 +70,31 @@ export class SigninComponent implements OnInit {
    * @param userPwd 
    * @param loginRouteType 
    */
-  doLogin(userId:string, userPwd:string, loginRouteType:string){
+  doLogin(userId: string, userPwd: string, loginRouteType: string) {
     this.spinner.show();
 
     this.authService.login(userId, userPwd, loginRouteType)
-    .pipe(first())
-    .subscribe(
+      .pipe(first())
+      .subscribe(
         data => {
-            this.spinner.hide();
-            // console.log("data", data);
-            if(data.error){
-              let errMsg = this.commonService.getTranslateValue("SIGN_IN.MESSAGE.ERROR.USER_PWD_WRONG");
-              if(data.message == "login_user_id_none"){
-                errMsg = this.commonService.getTranslateValue("SIGN_IN.MESSAGE.ERROR.USER_ID_NONE");
-              }else if(data.message == "login_user_none_verify"){
-                errMsg = this.commonService.getTranslateValue("SIGN_IN.MESSAGE.ERROR.USER_NONE_VERTIFY");
-              }
-
-              this.alertService.error(errMsg);
-            }else{
-              this.router.navigate([this.returnUrl]);
+          this.spinner.hide();
+          console.log("data", data);
+          if (data.error) {
+            let errMsg = this.commonService.getTranslateValue("SIGN_IN.MESSAGE.ERROR.USER_PWD_WRONG");
+            if (data.message == "login_user_id_none") {
+              errMsg = this.commonService.getTranslateValue("SIGN_IN.MESSAGE.ERROR.USER_ID_NONE");
+            } else if (data.message == "login_user_none_verify") {
+              errMsg = this.commonService.getTranslateValue("SIGN_IN.MESSAGE.ERROR.USER_NONE_VERTIFY");
             }
+
+            this.alertService.error(errMsg);
+          } else {
+            this.router.navigate(['/portfolio']);
+          }
         },
         error => {
-            this.alertService.error(error);
-            this.spinner.hide();
+          this.alertService.error(error);
+          this.spinner.hide();
         });
   }
 

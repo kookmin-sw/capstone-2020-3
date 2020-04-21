@@ -31,6 +31,8 @@ import { AlertComponent } from './alert/alert.component';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ViewPortfolioComponent } from './view-portfolio/view-portfolio.component';
 
 // required for AOT compilation
 export function httpLoaderFactory(http: HttpClient) {
@@ -50,6 +52,8 @@ export function httpLoaderFactory(http: HttpClient) {
     FooterComponent,
     SigninComponent,
     AlertComponent,
+    PortfolioComponent,
+    ViewPortfolioComponent,
   ],
   imports: [
     BrowserModule,

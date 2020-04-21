@@ -1,0 +1,236 @@
+<div class="wrapper">
+  <div class="page-header page-header-xs" data-parallax="true"
+    style="background-image: url('./assets/img/home-background.jpg');">
+    <div class="filter"></div>
+  </div>
+  <div class="section device-content">
+    <div class="container">
+      <div class="row">
+        <span style="width: 50%;"><h2 class="title">My Portfolio</h2></span>
+        <span style="width: 50%;">
+          <button type="button" class="btn btn-add" style="float: right;" (click)="goAddPortfolio()">New
+            Portfolio</button>
+        </span>
+      </div>
+
+      <div class="row">
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Version</th>
+                <th scope="col">Number of Viewers</th>
+                <th scope="col">Created</th>
+                <th scope="col">Updated</th>
+              </tr>
+            </thead>
+            <tbody [hidden]="dataTotalCount == 0">
+              <tr *ngFor="let device of dataList | paginate: config">
+                <th scope="row">
+                  <div class="media align-items-center view-device" (click)="goViewDevice(device.deviceSettingInfoSeq)">
+                    <a href="javascript:void(0)" class="avatar rounded-circle mr-3"
+                      *ngIf="device.deviceInoutType == 'I'"><img alt="Image placeholder"
+                        src="../assets/img/device/indoor.png"></a>
+                    <a href="javascript:void(0)" class="avatar rounded-circle mr-3"
+                      *ngIf="device.deviceInoutType == 'O'"><img alt="Image placeholder"
+                        src="../assets/img/device/outdoor.png"></a>
+                    <div class="media-body">
+                      <span class="mb-0 text-sm">{{ device.deviceName }}</span><span class="mb-0 text-sm"
+                        style="margin-left: 5px;"
+                        *ngIf="device.deviceSensorId != ''">({{ device.deviceSensorId }})</span>
+                    </div>
+                  </div>
+                </th>
+                <td>
+                  <span class="badge badge-dot mr-3" *ngIf="device.isDeviceRunYn == 'Y'">
+                    <i class="bg-run"></i> Run
+                  </span>
+                  <span class="badge badge-dot mr-3" *ngIf="device.isDeviceRunYn == 'N'">
+                    <i class="bg-stop"></i> Stop
+                  </span>
+                </td>
+                <td>
+                  <span class="badge badge-dot mr-3" *ngIf="device.pm25 > -1">
+                    <i class="bg-run"></i> <span style="color: #000;">Available</span>
+                  </span>
+                  <span class="badge badge-dot mr-3" *ngIf="device.pm25 == -1">
+                    <i class="bg-stop"></i> <span style="color: #dc3545;">Error</span>
+                  </span>
+                </td>
+                <td>
+                  <span class="mr-2">{{ onLocalDate(device.deviceRegDate, 'yyyy-MM-dd') }}</span>
+                </td>
+                <td>
+                  <span class="mr-2">{{ onLocalDate(device.deviceEditDate, '') }}</span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody [hidden]="dataTotalCount > 0">
+              <tr>
+                <td colspan="4">등록된 포트폴리오가 없습니다.</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="card-footer py-4" [hidden]="dataTotalCount == 0">
+        <ngb-pagination (pageChange)="pageChanged($event)" [collectionSize]="dataTotalCount" [(page)]="currentPage"
+          [maxSize]="10" [rotate]="true"></ngb-pagination>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+<div class="section section-dark text-center">
+  <div class="container">
+    <h2 class="title">Popular Portfolio</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-profile card-plain">
+          <div class="card-avatar">
+            <a href="#avatar"><img src="./assets/img/myapo/최락준.png" alt="..."></a>
+          </div>
+          <div class="card-block">
+            <a href="#paper-kit">
+              <div class="author">
+                <h4 class="card-title">Rakjun Choi</h4>
+                <h6 class="card-category">Product Manager</h6>
+              </div>
+            </a>
+            <p class="card-description text-center">
+              Teamwork is so important that it is virtually impossible for you to reach the height.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-info" (click)="goViewPortfolio()">Visit Portfolio</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-profile card-plain">
+          <div class="card-avatar">
+            <a href="#avatar"><img src="./assets/img/myapo/심재욱.png" alt="..."></a>
+          </div>
+          <div class="card-block">
+            <a href="#paper-kit">
+              <div class="author">
+                <h4 class="card-title">Jaewook Shim</h4>
+                <h6 class="card-category">Designer</h6>
+              </div>
+            </a>
+            <p class="card-description text-center">
+              A group becomes a team when each member is sure enough of himself and his contribution.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-info" (click)="goViewPortfolio()">Visit Portfolio</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-profile card-plain">
+          <div class="card-avatar">
+            <a href="#avatar"><img src="./assets/img/myapo/우승민.png" alt="..."></a>
+          </div>
+          <div class="card-block">
+            <a href="#paper-kit">
+              <div class="author">
+                <h4 class="card-title">Seungmin Woo</h4>
+                <h6 class="card-category">Developer</h6>
+              </div>
+            </a>
+            <p class="card-description text-center">
+              The strength of the team is each individual member. The strength of each member.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-info" (click)="goViewPortfolio()">Visit Portfolio</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-gray text-center">
+  <div class="container">
+    <h2 class="title">New Portfolio</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-profile card-plain">
+          <div class="card-avatar">
+            <a href="#avatar"><img src="./assets/img/myapo/권강민.png" alt="..."></a>
+          </div>
+          <div class="card-block">
+            <a href="#paper-kit">
+              <div class="author">
+                <h4 class="card-title">Kangmin Kwon</h4>
+                <h6 class="card-category">Product Manager</h6>
+              </div>
+            </a>
+            <p class="card-description text-center">
+              Teamwork is so important that it is virtually impossible for you to reach the heights.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-info" (click)="goViewPortfolio()">Visit Portfolio</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-profile card-plain">
+          <div class="card-avatar">
+            <a href="#avatar"><img src="./assets/img/myapo/황채은.png" alt="..."></a>
+          </div>
+          <div class="card-block">
+            <a href="#paper-kit">
+              <div class="author">
+                <h4 class="card-title">Chaeeun Hwang</h4>
+                <h6 class="card-category">Designer</h6>
+              </div>
+            </a>
+            <p class="card-description text-center">
+              The strength of the team is each individual member. The strength of each member.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-info" (click)="goViewPortfolio()">Visit Portfolio</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-profile card-plain">
+          <div class="card-avatar">
+            <a href="#avatar"><img src="./assets/img/myapo/윤준호.png" alt="..."></a>
+          </div>
+          <div class="card-block">
+            <a href="#paper-kit">
+              <div class="author">
+                <h4 class="card-title">Junho Yoon</h4>
+                <h6 class="card-category">Developer</h6>
+              </div>
+            </a>
+            <p class="card-description text-center">
+              A group becomes a team when each member is sure enough of himself and his contribution.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-info" (click)="goViewPortfolio()">Visit Portfolio</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
