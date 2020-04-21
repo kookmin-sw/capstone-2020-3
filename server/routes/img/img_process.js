@@ -38,6 +38,10 @@ key img1, img2, img3에 대해서 각각 이미지파일  받는다.
 
 
 
+
+
+
+
 //POST저장
 router.post('/up',  upload.fields([{ name: 'img1' }, { name: 'img2' }, { name: 'img3' }]), (req, res) => {
 
@@ -131,6 +135,20 @@ router.post('/user_img_up',upload.fields([{name:'img'}]),(req,res)=>{
 })
 
 
+//해당 해당 file이 저장된 경로를 찾고, 해당 이미지를 브라우저에 보여준다. !!Project랑 상관없음.
+//Resizing같은거 android에서 진행.
+router.get('/user_profile', function (req, res){
+
+
+    user_Id=req.user.id;
+    var query = connection.query(`select img_url from users where id=?`,[user_Id],(err,rows)=>{
+      if(err) console.error(err);
+
+      res.json(rows);
+
+    })
+
+});
 
 
 
@@ -283,22 +301,10 @@ router.post('/user_img', function(req, res, next) {
 });
 
 
-//해당 해당 file이 저장된 경로를 찾고, 해당 이미지를 브라우저에 보여준다. !!Project랑 상관없음.
-//Resizing같은거 android에서 진행.
-router.get('/user_profile', function (req, res){
 
 
-    user_Id=req.user.id;
-    var query = connection.query(`select img_url from users where id=?`,[user_Id],(err,rows)=>{
-      if(err) console.error(err);
-
-      res.json(rows);
-
-    })
-
-});
 };
-*/
+
 
 
 
