@@ -23,7 +23,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var facebookRouter = require('./routes/auth/facebook');
 var welcome=require('./routes/welcome')
-var phone_Auth_Router=require('./routes/auth/phone_Auth')
 var image_process=require('./routes/img/img_process');
 
 //세션 사용 설정
