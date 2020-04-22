@@ -81,7 +81,7 @@ export class PortfolioComponent implements OnInit {
    * 새로운 장치 등록 페이지 이동
    */
   goAddPortfolio() {
-    this.router.navigate(['/user-add-device']);
+    this.router.navigate(['/add-portfolio']);
   }
 
   

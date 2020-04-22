@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <div class="page-header page-header-xs" data-parallax="true"
+    style="background-image: url('./assets/img/home-background.jpg');">
+    <div class="filter"></div>
+  </div>
+
+  <div class="section device-content">
+    <div class="container">
+      <div class="tim-title">
+        <h2>New Portfolio</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 mr-auto">
+          <form [formGroup]="deviceInfoForm" class="contact-form" (ngSubmit)="onSubmit()">
+            
+            <!-- 2. 사진 -->
+            <div class="row" style="margin-bottom:10px;">
+              <div class="col-md-6">
+                <label>대표 사진</label><br>
+                <label class="btn btn-just-icon btn-position image-upload-container">
+                  <i class="fa fa-edit"></i>
+                  <input #imageInput
+                      class="image-input"
+                      type="file"
+                      accept="image/*"
+                      (change)="doChoiceImgeFile(imageInput)">
+                </label>   
+              </div>
+            </div>
+
+            <!-- 1.기본 정보 -->
+            <div class="row" style="margin-bottom:10px;">
+              <div class="col-md-6">
+                <label>포트폴리오 제목</label>
+                <input type="text" name="deviceName" formControlName="deviceName" class="form-control">
+              </div>
+            </div>
+            <!-- Version -->
+            <div class="row" style="margin-bottom:10px;">
+              <div class="col-md-6">
+                <label>프로젝트 제목</label>
+                <input type="text" name="deviceSensorId" formControlName="deviceSensorId" class="form-control">
+              </div>
+            </div>
+
+            <label>프로젝트 설명</label>
+            <textarea name="deviceDesc" formControlName="deviceDesc" class="form-control" rows="4"></textarea>
+
+            <!-- button -->
+            <div class="row">
+              <div class="col-md-4 mr-auto">
+                <button class="btn btn-info btn-lg">Save Portfolio</button>
+                <button class="btn btn-default btn-lg" (click)="doCancel()">Cancel</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

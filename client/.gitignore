@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/src/assets/config
 
 # dependencies
 /node_modules

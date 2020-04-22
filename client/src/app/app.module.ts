@@ -33,6 +33,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ViewPortfolioComponent } from './view-portfolio/view-portfolio.component';
+import { AddPortfolioComponent } from './add-portfolio/add-portfolio.component';
 
 // required for AOT compilation
 export function httpLoaderFactory(http: HttpClient) {
@@ -54,6 +55,7 @@ export function httpLoaderFactory(http: HttpClient) {
     AlertComponent,
     PortfolioComponent,
     ViewPortfolioComponent,
+    AddPortfolioComponent,
   ],
   imports: [
     BrowserModule,

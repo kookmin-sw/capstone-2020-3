@@ -13,11 +13,10 @@
                     <h6>{{ this.userInfo.userId }} <span *ngIf="this.userInfo.genderDisp != ''">({{ this.userInfo.genderDisp }})</span></h6>
                 </div>
             </div>
-            <div class="row" style="margin-top: 7vh;">
+            <div class="row" style="margin-top: 1vh;">
                 <div class="col-md-6 ml-auto mr-auto text-center">
                     <p *ngIf="this.userInfo.birthday != ''">Birthday: {{ this.userInfo.birthday }}</p>
-                    <p>Join Date: {{ onLocalDate(this.userInfo.regDate, 'yyyy-MM-dd') }}</p>
-                    <p>Edit Date: {{ onLocalDate(this.userInfo.editDate, 'yyyy-MM-dd') }}</p>
+                    <p>Join Date: {{ onLocalDate(this.userInfo.editDate, 'yyyy-MM-dd') }}</p>
                     <p class="description" *ngIf="this.userInfo.profileContents != ''">{{ this.userInfo.profileContents }}</p>
                     <div style="margin-top: 15px;">
                         <button class="btn btn-outline-default btn-round" (click)="openEditPopup()"><i class="fa fa-cog"></i> Edit Profile</button><br><br>
