@@ -12,18 +12,18 @@
 
       <div class="row">
         <div class="col-md-8 mr-auto">
-          <form [formGroup]="deviceInfoForm" class="contact-form" (ngSubmit)="onSubmit()">
+          <!-- <form [formGroup]="deviceInfoForm" class="contact-form" (ngSubmit)="onSubmit()"> -->
             
             <!-- 2. 사진 -->
             <div class="row" style="margin-bottom:10px;">
               <div class="col-md-6">
-                <label>대표 사진</label><br>
+                <label>PDF 파일을 올려주세요</label><br>
                 <label class="btn btn-just-icon btn-position image-upload-container">
                   <i class="fa fa-edit"></i>
                   <input #imageInput
                       class="image-input"
                       type="file"
-                      accept="image/*"
+                      accept="pdf/*"
                       (change)="doChoiceImgeFile(imageInput)">
                 </label>   
               </div>
@@ -36,16 +36,9 @@
                 <input type="text" name="deviceName" formControlName="deviceName" class="form-control">
               </div>
             </div>
-            <!-- Version -->
-            <div class="row" style="margin-bottom:10px;">
-              <div class="col-md-6">
-                <label>프로젝트 제목</label>
-                <input type="text" name="deviceSensorId" formControlName="deviceSensorId" class="form-control">
-              </div>
-            </div>
-
+            <!-- 프로젝트 설명 -->
             <label>프로젝트 설명</label>
-            <textarea name="deviceDesc" formControlName="deviceDesc" class="form-control" rows="4"></textarea>
+            <textarea name="deviceDesc" formControlName="deviceDesc" class="form-control" rows="4"></textarea><br>
 
             <!-- button -->
             <div class="row">
@@ -55,7 +48,7 @@
               </div>
             </div>
 
-          </form>
+          <!-- </form> -->
         </div>
       </div>
 

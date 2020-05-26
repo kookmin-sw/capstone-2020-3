@@ -15,6 +15,12 @@
         </span>
       </div>
 
+      <label class="btn btn-default">
+        <input type="file" (change)="selectFile($event)">
+      </label>
+      
+      <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+
       <div class="row">
         <div class="table-responsive">
           <table class="table align-items-center table-flush">
