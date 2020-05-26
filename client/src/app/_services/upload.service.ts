@@ -1,26 +1,21 @@
 import { Injectable } from '@angular/core';
 import * as AWS from 'aws-sdk/global';
 import * as S3 from 'aws-sdk/clients/s3';
-import { ConfigService } from '../_services/config.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UploadService {
-  private aKey: string;
-  private sKey: string;
 
-  constructor(public config: ConfigService) {
-    this.aKey = this.config.getConfig('accessKeyId');
-    this.sKey = this.config.getConfig('secretAccessKey');
-   }
+  constructor() { }
 
   uploadFile(file) {
     const contentType = file.type;
     const bucket = new S3(
       {
-        accessKeyId: this.aKey,
-        secretAccessKey: this.sKey,
+        accessKeyId: 'AKIASGKUWD5ZIQZWWV7J',
+        secretAccessKey: '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',
         region: 'us-east-1'
       }
     );
