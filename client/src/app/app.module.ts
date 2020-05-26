@@ -19,6 +19,7 @@ import { CommonService } from './_services/common.service';
 import { AlertService } from './_services/alert.service';
 import { UserService } from './_services/user.service';
 import { AuthenticationService } from './_services/authentication.service';
+import { UploadService } from './_services/upload.service';
 import { PipesModule } from './_pipes/pipes.module';
 import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
@@ -100,6 +101,7 @@ export function httpLoaderFactory(http: HttpClient) {
     AlertService,
     UserService,
     AuthenticationService,
+    UploadService
   ],
   bootstrap: [AppComponent],
   entryComponents: [
