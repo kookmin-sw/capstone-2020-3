@@ -24,7 +24,6 @@ export class ViewPortfolioComponent implements OnInit {
   ngOnInit() {
     // Configure Credentials to use Cognito
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: 'us-east-1:3f38c526-6463-4312-8a5e-c9bc106a29a9'
     });
 
     AWS.config.region = 'us-east-1';
