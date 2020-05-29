@@ -1,30 +1,267 @@
 <div class="wrapper">
-    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/login-image.jpg');">
+    <div class="page-header page-header-xs" data-parallax="true"
+        style="background-image: url('./assets/img/login-image.jpg');">
         <div class="filter"></div>
     </div>
-    <!-- <div class="section profile-content">
-        <div class="container">
-            <div class="owner">
-                <div class="avatar">
-                    <img [src]="onGetUserProfileImage()" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                </div>
-                <div>
-                    <h4 class="title">{{ this.userInfo.firstName }}  {{ this.userInfo.lastName }} <span *ngIf="this.userInfo.nickName != ''">({{ this.userInfo.nickName }})</span></h4>
-                    <h6>{{ this.userInfo.userId }} <span *ngIf="this.userInfo.genderDisp != ''">({{ this.userInfo.genderDisp }})</span></h6>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 1vh;">
-                <div class="col-md-6 ml-auto mr-auto text-center">
-                    <p *ngIf="this.userInfo.birthday != ''">Birthday: {{ this.userInfo.birthday }}</p>
-                    <p>Join Date: {{ onLocalDate(this.userInfo.editDate, 'yyyy-MM-dd') }}</p>
-                    <p class="description" *ngIf="this.userInfo.profileContents != ''">{{ this.userInfo.profileContents }}</p>
-                    <div style="margin-top: 15px;">
-                        <button class="btn btn-outline-default btn-round" (click)="openEditPopup()"><i class="fa fa-cog"></i> Edit Profile</button><br><br>
-                        <button class="btn btn-outline-default btn-round" (click)="changePasswordPopup()"><i class="fa fa-cog"></i> Change Password</button>
-                    </div>
+    <div class="header bg-gradient-danger pb-5 pt-5 pt-md-5">
+        <div class="container-fluid">
+            <div class="header-body">
+                <!-- Card stats -->
+                <div class="row">
                 </div>
             </div>
         </div>
-    </div> -->
-</div>
+    </div>
+    <div class="container-fluid mt--4">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card shadow">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase text-muted ls-1 mb-1">HeatMap</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card page-carousel">
+                        <ngb-carousel data-interval="false">
+                            <ng-template ngbSlide *ngFor="let img of images; index as i">
+                                <div class="picsum-img-wrapper">
+                                    <img src="./assets/img/myapo/heatmap.png" alt="{{i+1}} 번째 포트폴리오">
+                                    <div class="carousel-caption">
+                                        <p>Page {{i}}</p>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card shadow">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase text-muted ls-1 mb-1">My Portfolio</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card page-carousel">
+                        <ngb-carousel data-interval="false">
+                            <ng-template ngbSlide *ngFor="let img of images; index as i">
+                                <div class="picsum-img-wrapper">
+                                    <img src="https://portfoliosrc.s3.amazonaws.com/portfolio_png/jaewook/{{img}}.jpg"
+                                        alt="{{i+1}} 번째 포트폴리오">
+                                    <div class="carousel-caption">
+                                        <p>Page {{i}}</p>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card shadow">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase text-muted ls-1 mb-1">Top 5</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card page-carousel">
+                        <ngb-carousel data-interval="false">
+                            <ng-template ngbSlide *ngFor="let img of images; index as i">
+                                <div class="picsum-img-wrapper">
+                                    <img src="./assets/img/myapo/radarchart.png"
+                                        alt="{{i+1}} 번째 포트폴리오">
+                                    <div class="carousel-caption">
+                                        <p>Page {{i}}</p>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row mt-5"> -->
+            <div class="col-xl-4">
+                <div class="card shadow">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase text-muted ls-1 mb-1">Hit Ratio</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card page-carousel">
+                        <ngb-carousel data-interval="false">
+                            <ng-template ngbSlide *ngFor="let img of images; index as i">
+                                <div class="picsum-img-wrapper">
+                                    <img src="./assets/img/myapo/piechart.png"
+                                        alt="{{i+1}} 번째 포트폴리오">
+                                    <div class="carousel-caption">
+                                        <p>Page {{i}}</p>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card shadow">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase text-muted ls-1 mb-1">Tag Cloud</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card page-carousel">
+                        <ngb-carousel data-interval="false">
+                            <ng-template ngbSlide *ngFor="let img of images; index as i">
+                                <div class="picsum-img-wrapper">
+                                    <img src="./assets/img/myapo/alice_tagcloud.png" style="max-height: 100%;"
+                                        alt="{{i+1}} 번째 포트폴리오">
+                                    <div class="carousel-caption">
+                                        <p>Page {{i}}</p>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card shadow">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase text-muted ls-1 mb-1">Word Cloud</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <!-- Projects table -->
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Word</th>
+                                    <th scope="col">Frequency</th>
+                                    <th scope="col">Ratio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        AWS
+                                    </th>
+                                    <td>
+                                        14
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-2">60%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-danger" role="progressbar"
+                                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width: 60%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        빅데이터 클라우드
+                                    </th>
+                                    <td>
+                                        11
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-2">55%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-success" role="progressbar"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width: 70%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        빅데이터
+                                    </th>
+                                    <td>
+                                        7
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-2">50%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-primary" role="progressbar"
+                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width: 80%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        API
+                                    </th>
+                                    <td>
+                                        5
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-2">42%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-info" role="progressbar"
+                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width: 75%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        SPARK
+                                    </th>
+                                    <td>
+                                        6
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-2">38%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-warning" role="progressbar"
+                                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width: 30%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+        <!-- </div> -->
+    </div>
+
+</div>

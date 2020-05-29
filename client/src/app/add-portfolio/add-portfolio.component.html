@@ -12,41 +12,33 @@
 
       <div class="row">
         <div class="col-md-8 mr-auto">
-          <!-- <form [formGroup]="deviceInfoForm" class="contact-form" (ngSubmit)="onSubmit()"> -->
-            
-            <!-- 2. 사진 -->
-            <div class="row" style="margin-bottom:10px;">
-              <div class="col-md-6">
-                <label>PDF 파일을 올려주세요</label><br>
-                <label class="btn btn-just-icon btn-position image-upload-container">
-                  <i class="fa fa-edit"></i>
-                  <input #imageInput
-                      class="image-input"
-                      type="file"
-                      accept="pdf/*"
-                      (change)="doChoiceImgeFile(imageInput)">
-                </label>   
-              </div>
-            </div>
 
-            <!-- 1.기본 정보 -->
-            <div class="row" style="margin-bottom:10px;">
-              <div class="col-md-6">
-                <label>포트폴리오 제목</label>
-                <input type="text" name="deviceName" formControlName="deviceName" class="form-control">
-              </div>
-            </div>
-            <!-- 프로젝트 설명 -->
-            <label>프로젝트 설명</label>
-            <textarea name="deviceDesc" formControlName="deviceDesc" class="form-control" rows="4"></textarea><br>
+          <label class="btn btn-default">
+            <input type="file" (change)="selectFile($event)">
+          </label>
 
-            <!-- button -->
-            <div class="row">
-              <div class="col-md-4 mr-auto">
-                <button class="btn btn-info btn-lg">Save Portfolio</button>
-                <button class="btn btn-default btn-lg" (click)="doCancel()">Cancel</button>
-              </div>
+          <!-- 1.기본 정보 -->
+          <div class="row" style="margin-bottom:10px;">
+            <div class="col-md-6">
+              <label>포트폴리오 제목</label><br>
+              <input type="text" name="deviceName">
             </div>
+          </div><br>
+          <!-- 2.버전 정보 -->
+          <div class="row" style="margin-bottom:10px;"><br>
+            <div class="col-md-6">
+              <label>포트폴리오 버전</label><br>
+              <input type="text" name="deviceName">
+            </div>
+          </div><br>
+
+          <!-- button -->
+          <div class="row">
+            <div class="col-md-4 mr-auto">
+              <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+              <button class="btn btn-default" (click)="doCancel()">Cancel</button>
+            </div>
+          </div>
 
           <!-- </form> -->
         </div>

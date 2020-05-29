@@ -7,7 +7,6 @@ import { LocalDatePipe } from '../_pipes/local-date';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 import { AuthenticationService } from '../_services/authentication.service';
-import { UploadService } from '../_services/upload.service';
 
 
 @Component({
@@ -31,14 +30,12 @@ export class PortfolioComponent implements OnInit {
   currentPage = 1;
 
   config: any;
-  selectedFiles: FileList;
 
   constructor(
     public router: Router,
     public localDatePipe: LocalDatePipe,
     public spinner: NgxSpinnerService,
     public authService: AuthenticationService,
-    private uploadService: UploadService,
   ) {
     if (this.authService.currentUserValue) {
       this.userInfo = this.authService.currentUserValue["userInfo"];
@@ -57,16 +54,6 @@ export class PortfolioComponent implements OnInit {
     setTimeout(() => {
       this.getUserDevices();
     }, 300);
-  }
-
-
-  upload() {
-    const file = this.selectedFiles.item(0);
-    this.uploadService.uploadFile(file);
-  }
-
-  selectFile(event) {
-    this.selectedFiles = event.target.files;
   }
 
 

@@ -24,7 +24,7 @@ import { PipesModule } from './_pipes/pipes.module';
 import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
 import { SignupComponent, SignUpMsgModalContent } from './signup/signup.component';
-import { ProfileComponent, ProfileMsgModalContent, AlertModalContent, ChangePasswordModalContent } from './profile/profile.component';
+import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SigninComponent } from './signin/signin.component';
@@ -47,9 +47,6 @@ export function httpLoaderFactory(http: HttpClient) {
     SignupComponent,
     SignUpMsgModalContent,
     ProfileComponent,
-    ProfileMsgModalContent,
-    AlertModalContent,
-    ChangePasswordModalContent,
     NavbarComponent,
     FooterComponent,
     SigninComponent,
@@ -105,10 +102,7 @@ export function httpLoaderFactory(http: HttpClient) {
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-    SignUpMsgModalContent,
-    ProfileMsgModalContent,
-    AlertModalContent,
-    ChangePasswordModalContent,
+    SignUpMsgModalContent
   ]
 })
 export class AppModule { }

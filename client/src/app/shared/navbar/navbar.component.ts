@@ -69,7 +69,7 @@ export class NavbarComponent implements OnInit {
     isMap(){
         let titlee = this.location.prepareExternalUrl(this.location.path());
 
-        if( titlee === '/map' ) {
+        if( titlee === '/view-portfolio' ) {
             return true;
         }
         else {
