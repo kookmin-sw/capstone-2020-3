@@ -54,8 +54,67 @@ export class PortfolioComponent implements OnInit {
     setTimeout(() => {
       this.getUserDevices();
     }, 300);
+    console.log(this.userInfo.nickName);
   }
 
+  // 버튼 클릭 시 분석하는 작업 수행해줌
+  makeAnalysis() {
+    this.makeTop5Data();
+  }
+  makeAnalysis2() {
+    this.pdfToImage();
+  }
+  makeAnalysis3() {
+    this.makeAlice();
+  }
+
+  /**
+   * pdfToPng 작업
+   */
+  async makeAlice() {
+    this.dataList = [];
+    this.authService.makeAlice(this.userInfo.nickName)
+    .pipe()
+    .subscribe(
+        data => {
+          console.log('success');
+        },
+        error => {
+          console.log('error');
+    });
+  }
+
+  /**
+   * pdfToPng 작업
+   */
+  async pdfToImage() {
+    this.dataList = [];
+    this.authService.pdfToImage(this.userInfo.nickName)
+    .pipe()
+    .subscribe(
+        data => {
+          console.log('success');
+        },
+        error => {
+          console.log('error');
+    });
+  }
+
+  /**
+   * Top5 Data 만들기
+   */
+  async makeTop5Data() {
+    this.dataList = [];
+    this.authService.makeTop5Data(this.userInfo.nickName)
+    .pipe()
+    .subscribe(
+        data => {
+          console.log('success');
+        },
+        error => {
+          console.log('error');
+    });
+  }
 
   /**
    * 등록된 사용자 장치들
