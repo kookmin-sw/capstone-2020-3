@@ -7,7 +7,9 @@
       <ngb-carousel data-interval="false" style="height: 77vh;">
         <ng-template ngbSlide *ngFor="let img of images; index as i">
           <div class="picsum-img-wrapper">
-            <img src="https://portfoliosrc.s3.amazonaws.com/portfolio_png/jaewook/{{img}}.jpg" alt="{{i+1}} 번째 포트폴리오">
+            <!-- jaewook자리에 user nickname 넣어주기 -->
+            <img src="https://portfoliosrc.s3.amazonaws.com/portfolio_png/{{nickName}}/{{img}}.png" alt="{{i+1}} 번째 포트폴리오">
+            <!-- https://portfoliosrc.s3.amazonaws.com/portfolio_png/jaewook/1.png -->
             <div class="carousel-caption">
               <!-- <p>Page {{i}}</p> -->
             </div>
@@ -15,6 +17,7 @@
         </ng-template>
       </ngb-carousel>
     </div>
+    <button class="btn btn-add" style="float: right;" (click)="makeHeatmap()">Make Heatmap</button>
     <button class="btn btn-default" style="float: right;" (click)="doCancel()">Done</button>
   </div>
 </div>
