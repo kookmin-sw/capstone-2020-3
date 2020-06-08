@@ -11,11 +11,15 @@
         </span>
         <span style="width: 50%;">
           <button type="button" class="btn btn-add" style="float: right;" (click)="goAddPortfolio()">New
-            Portfolio</button>
+            Portfolio</button><br>
+          <button type="button" class="btn btn-cancel" style="float: right;" (click)="makeAnalysis()">Create Portfolio Analysis</button><br>
+          <button type="button" class="btn btn-cancel" style="float: right;" (click)="makeAnalysis2()">Create Portfolio Analysis2</button><br>
+          <button type="button" class="btn btn-cancel" style="float: right;" (click)="makeAnalysis3()">Create Portfolio Analysis3</button>
+
         </span>
       </div>
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="table-responsive">
           <table class="table align-items-center table-flush">
             <thead class="thead-light">
@@ -77,13 +81,13 @@
 
           </table>
         </div>
-      </div>
+      </div> -->
 
       <!-- Pagination -->
-      <div class="card-footer py-4" [hidden]="dataTotalCount == 0">
+      <!-- <div class="card-footer py-4" [hidden]="dataTotalCount == 0">
         <ngb-pagination (pageChange)="pageChanged($event)" [collectionSize]="dataTotalCount" [(page)]="currentPage"
           [maxSize]="10" [rotate]="true"></ngb-pagination>
-      </div>
+      </div> -->
 
 
 
