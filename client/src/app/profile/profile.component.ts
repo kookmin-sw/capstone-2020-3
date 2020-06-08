@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js';
+import { AuthenticationService } from '../_services/authentication.service';
+
+declare let AWS: any;
 
 // core components
 import {
@@ -15,33 +18,55 @@ import {
     styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+    userInfo: any;
 
     public datasets: any;
     public data: any;
     public salesChart;
     public clicked: boolean = true;
     public clicked1: boolean = false;
-
+    public dataList: any;
+    public paramInfo: any;
     public images: any;
+    public nickName: any;
+    public topNames: any = {};
+    constructor(
+        public authService: AuthenticationService,
+    ) {
+        this.userInfo = this.authService.currentUserValue["userInfo"];
+        this.nickName = this.userInfo.nickName;
+    }
 
-    constructor() { }
 
     ngOnInit() {
+        // Set up credentials
+        AWS.config.credentials = new AWS.Credentials({
+        // 이것들은 github에 올라가면 안됨.
+        accessKeyId: 'secret', secretAccessKey: 'this is secret' // secret config code
+        });
 
+        const params = {
+        Bucket: 'portfoliosrc',
+        Key: 'portfolio_pdf/portfolio.txt'
+        };
+
+        const s3 = new AWS.S3();
+        let txts = '';
+
+        s3.getObject(params, function(err, data) {
+            if (err) {
+                console.error(err); // an error occurred
+            } else {
+                console.log(data);
+                const txtString = new TextDecoder('utf-8').decode(data.Body);
+                txts = (JSON.parse(txtString));
+                console.log(txts['contents']);
+            }
+        });
+        this.topNames = txts;
+        // console.log(this.topNames['contents']);
         // images 개수를 가져와서 넣어주는 방식임.
-        this.images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-        this.datasets = [
-            [0, 20, 10, 30, 15, 40, 20, 60, 60],
-            [0, 20, 5, 25, 10, 30, 15, 40, 40]
-        ];
-        this.data = this.datasets[0];
-
-
-        var chartOrders = document.getElementById('chart-orders');
-
-        parseOptions(Chart, chartOptions());
-
+        this.images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // hard coding..
 
         // var ordersChart = new Chart(chartOrders, {
         //   type: 'bar',
@@ -57,10 +82,6 @@ export class ProfileComponent implements OnInit {
         //     data: chartExample1.data
         // });
     }
-
-
-
-
 
     // public updateOptions() {
     //     this.salesChart.data.datasets[0].data = this.data;
