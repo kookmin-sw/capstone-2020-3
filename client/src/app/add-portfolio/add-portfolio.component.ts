@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UploadService } from '../_services/upload.service';
+import { AuthenticationService } from '../_services/authentication.service';
 
 
 class ImageSnippet {
@@ -15,11 +16,17 @@ class ImageSnippet {
   styleUrls: ['./add-portfolio.component.scss']
 })
 export class AddPortfolioComponent implements OnInit {
+  userInfo: any;
   selectedFiles: FileList;
   constructor(
     public router: Router,
     private uploadService: UploadService,
-  ) { }
+    public authService: AuthenticationService,
+  ) {
+    if (this.authService.currentUserValue) {
+      this.userInfo = this.authService.currentUserValue["userInfo"];
+    }
+   }
 
   ngOnInit() {
   }
@@ -30,7 +37,7 @@ export class AddPortfolioComponent implements OnInit {
 
   upload() {
     const file = this.selectedFiles.item(0);
-    this.uploadService.uploadFile(file);
+    this.uploadService.uploadFile(file, this.userInfo.nickName);
   }
 
   selectFile(event) {
