@@ -14,7 +14,7 @@
     </div>
     <div class="container-fluid mt--4">
         <div class="row">
-            <div class="col-xl-4">
+            <div class="col-xl-6">
                 <div class="card shadow">
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
@@ -27,17 +27,14 @@
                         <ngb-carousel data-interval="false">
                             <ng-template ngbSlide *ngFor="let img of images; index as i">
                                 <div class="picsum-img-wrapper">
-                                    <img src="./assets/img/myapo/heatmap.png" alt="{{i+1}} 번째 포트폴리오">
-                                    <div class="carousel-caption">
-                                        <p>Page {{i}}</p>
-                                    </div>
+                                    <img src="https://portfoliosrc.s3.amazonaws.com/heatmap/portfolio/{{img}}.png" alt="{{i+1}} 번째 포트폴리오">
                                 </div>
                             </ng-template>
                         </ngb-carousel>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4">
+            <div class="col-xl-6">
                 <div class="card shadow">
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
@@ -50,7 +47,7 @@
                         <ngb-carousel data-interval="false">
                             <ng-template ngbSlide *ngFor="let img of images; index as i">
                                 <div class="picsum-img-wrapper">
-                                    <img src="https://portfoliosrc.s3.amazonaws.com/portfolio_png/jaewook/{{img}}.jpg"
+                                    <img src="https://portfoliosrc.s3.amazonaws.com/portfolio_png/jaewook/{{img}}.png"
                                         alt="{{i+1}} 번째 포트폴리오">
                                     <div class="carousel-caption">
                                         <p>Page {{i}}</p>
@@ -61,56 +58,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4">
-                <div class="card shadow">
-                    <div class="card-header bg-transparent">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h6 class="text-uppercase text-muted ls-1 mb-1">Top 5</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card page-carousel">
-                        <ngb-carousel data-interval="false">
-                            <ng-template ngbSlide *ngFor="let img of images; index as i">
-                                <div class="picsum-img-wrapper">
-                                    <img src="./assets/img/myapo/radarchart.png"
-                                        alt="{{i+1}} 번째 포트폴리오">
-                                    <div class="carousel-caption">
-                                        <p>Page {{i}}</p>
-                                    </div>
-                                </div>
-                            </ng-template>
-                        </ngb-carousel>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row mt-5"> -->
-            <div class="col-xl-4">
-                <div class="card shadow">
-                    <div class="card-header bg-transparent">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h6 class="text-uppercase text-muted ls-1 mb-1">Hit Ratio</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card page-carousel">
-                        <ngb-carousel data-interval="false">
-                            <ng-template ngbSlide *ngFor="let img of images; index as i">
-                                <div class="picsum-img-wrapper">
-                                    <img src="./assets/img/myapo/piechart.png"
-                                        alt="{{i+1}} 번째 포트폴리오">
-                                    <div class="carousel-caption">
-                                        <p>Page {{i}}</p>
-                                    </div>
-                                </div>
-                            </ng-template>
-                        </ngb-carousel>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4">
+
+            <div class="col-xl-6">
                 <div class="card shadow">
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
@@ -123,23 +72,20 @@
                         <ngb-carousel data-interval="false">
                             <ng-template ngbSlide *ngFor="let img of images; index as i">
                                 <div class="picsum-img-wrapper">
-                                    <img src="./assets/img/myapo/alice_tagcloud.png" style="max-height: 100%;"
+                                    <img src="https://portfoliosrc.s3.amazonaws.com/portfolio_png/{{nickName}}/{{nickName}}_final.png" style="max-height: 100%;"
                                         alt="{{i+1}} 번째 포트폴리오">
-                                    <div class="carousel-caption">
-                                        <p>Page {{i}}</p>
-                                    </div>
                                 </div>
                             </ng-template>
                         </ngb-carousel>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4">
+            <div class="col-xl-6">
                 <div class="card shadow">
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="text-uppercase text-muted ls-1 mb-1">Word Cloud</h6>
+                                <h6 class="text-uppercase text-muted ls-1 mb-1">Top 5 Word</h6>
                             </div>
                         </div>
                     </div>
@@ -149,110 +95,53 @@
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Word</th>
-                                    <th scope="col">Frequency</th>
-                                    <th scope="col">Ratio</th>
+                                    <th scope="col">Rank</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">
-                                        AWS
-                                    </th>
+                                        AWS                                    </th>
                                     <td>
-                                        14
+                                        1
                                     </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">60%</span>
-                                            <div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-danger" role="progressbar"
-                                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 60%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
+                                    
                                 </tr>
                                 <tr>
                                     <th scope="row">
                                         빅데이터 클라우드
                                     </th>
                                     <td>
-                                        11
+                                        2
                                     </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        클라우드 경험은
+                                    </th>
                                     <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">55%</span>
-                                            <div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-success" role="progressbar"
-                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 70%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        3
                                     </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        경험은 있어
+                                    </th>
+                                    <td>
+                                        4
+                                    </td>
+                                    
                                 </tr>
                                 <tr>
                                     <th scope="row">
                                         빅데이터
                                     </th>
                                     <td>
-                                        7
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">50%</span>
-                                            <div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-primary" role="progressbar"
-                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 80%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        API
-                                    </th>
-                                    <td>
                                         5
                                     </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">42%</span>
-                                            <div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-info" role="progressbar"
-                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 75%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        SPARK
-                                    </th>
-                                    <td>
-                                        6
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">38%</span>
-                                            <div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-warning" role="progressbar"
-                                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 30%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
+                                    
                                 </tr>
                             </tbody>
                         </table>
