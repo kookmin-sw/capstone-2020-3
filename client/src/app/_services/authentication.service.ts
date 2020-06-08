@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 
 import { ConfigService } from '../_services/config.service';
 
@@ -31,6 +31,94 @@ export class AuthenticationService {
   public get currentUserValue(): User {
     return this.currentUserSubject.value;
   }
+
+  /**
+   * alice 작업
+   */
+  makeAlice(paramData: any) {
+    if(paramData){
+      const url = 'http://secret:port'; // config code
+      const params = paramData;
+      return this.http.get<any>(url + "/pdfToImage/final/" + paramData)
+        .pipe(
+          tap(_ => this.log('pdf To Image')),
+          catchError(this.handleError('Error pdf To Image', []))
+        );
+    }
+  }
+
+
+  /**
+   * pdfToImage 작업
+   */
+  pdfToImage(paramData: any) {
+    if(paramData){
+      const url = 'http://secret:port'; // config code
+      const params = paramData;
+      return this.http.get<any>(url + "/pdfToImage/" + paramData)
+        .pipe(
+          tap(_ => this.log('pdf To Image')),
+          catchError(this.handleError('Error pdf To Image', []))
+        );
+    }
+  }
+
+  /**
+   * 포트폴리오 top5 만들기
+   */
+  makeTop5Data(paramData: any) {
+    if(paramData){
+      const url = 'http://secret:code'; // config code
+      const params = paramData;
+      return this.http.get<any>(url + "/" + paramData)
+        .pipe(
+          tap(_ => this.log('fetched Top5 data')),
+          catchError(this.handleError('Error Top5 data', []))
+        );
+    }
+  }
+
+  /**
+   * eyetracking 좌표보내기
+   * @param paramData 
+   */
+  postEyetrackingData(paramData: any) {
+    if(paramData){
+      const url = 'http://secret:code/'; // config code
+      const options = {
+        headers: new HttpHeaders({
+          'Content-Type':  'application/json'
+        })
+      };
+      return this.http.post<any>(url, paramData, options)
+        .pipe(
+          catchError(this.handleError('postEyetrackingData', null))
+        );
+    }
+  }
+
+  /**
+   * eyetracking png로 만들기
+   * @param paramData
+   */
+  makeEyetrackingPng(paramData: any) {
+    console.log(paramData);
+    if(paramData){
+      const url = 'secret/code'; // config code
+      const options = {
+        headers: new HttpHeaders({
+          'Content-Type':  'application/json'
+        })
+      };
+      console.log(url);
+
+      return this.http.post<any>(url, paramData)
+        .pipe(
+          catchError(this.handleError('makeEyetrackingPng', null))
+        );
+    }
+  }
+
 
   /**
    * 로그인
