@@ -42,7 +42,7 @@
     "jw-bootstrap-switch-ng2": "^2.0.5",
     "kinesis": "^1.2.2",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.25",
+    "moment-timezone": "^0.5.35",
     "ng2-charts": "^2.2.2",
     "ng2-nouislider": "^1.7.13",
     "ngx-cookie-service": "^2.2.0",
